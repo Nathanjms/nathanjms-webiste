@@ -7,10 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Nathan James.</h1>
         <p>
-          <FaSpinner icon="spinner" className="spinner" />
-        </p>
-        <p>
-          Coming Soon..
+          Coming Soon...
         </p>
       </header>
     </div >
