@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <h1>Nathan James.</h1>
         <p>
-          Coming Soon
+          Coming Soon...
         </p>
       </header>
     </div >
