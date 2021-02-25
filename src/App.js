@@ -10,7 +10,7 @@ function App() {
           <FaSpinner icon="spinner" className="spinner" />
         </p>
         <p>
-          Coming Soon...
+          Coming Soon..
         </p>
       </header>
     </div >
