@@ -1,6 +1,5 @@
 branches:
   only:
-  - gh-pages
   - main
 language: node_js
 node_js:
