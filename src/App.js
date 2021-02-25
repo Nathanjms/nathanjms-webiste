@@ -1,5 +1,4 @@
 import './App.css';
-import { FaSpinner } from 'react-icons/fa';
 
 function App() {
   return (
