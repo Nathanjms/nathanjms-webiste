@@ -11,6 +11,7 @@ cache:
 script:
   - npm run build
 after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master"
   - git config --global user.name "nathanjms"
   - git config --global user.email "64075030+Nathanjms@users.noreply.github.com"
   - git remote rm origin
