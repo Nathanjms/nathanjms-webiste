@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - stable
+cache:
+  bundle: true
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+after_success:
+  - git config --global user.name "nathanjms"
+  - git config --global user.email "64075030+Nathanjms@users.noreply.github.com"
+  - git remote rm origin
+  - git remote add origin https://nathanjms:${GITHUB_TOKEN}@github.com/nathanjms/nathan-james.git
+  - npm run deploy
