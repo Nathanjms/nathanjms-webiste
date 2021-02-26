@@ -8,6 +8,7 @@ function App() {
         <p>
           Coming Soon...
         </p>
+        <button className="btn btn-primary">Click Me</button>
       </header>
     </div >
   );
