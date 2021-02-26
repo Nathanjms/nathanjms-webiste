@@ -1,4 +1,5 @@
 import './App.css';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <p>
           Coming Soon...
         </p>
+        <Button>Click Me</Button>
       </header>
     </div >
   );
