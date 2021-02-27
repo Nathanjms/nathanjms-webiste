@@ -21,7 +21,7 @@ function SkillsList() {
                             <h3>{element.name}</h3>
                             <div className="progress">
                                 <div className="progress-bar" style={{ width: (element.rating * 10) + "%" }}>
-                                    <span className="sr-only">70% Complete</span>
+                                    <span className="sr-only">Rating: {element.rating} out of 10.</span>
                                 </div>
                             </div>
                         </div>
@@ -38,12 +38,12 @@ function AdditionalSkillsList() {
             <div className="row justify-content-center">
                 {skillsData.additional.map(element => (
 
-                    <div key={element.id} className="col-md-4 col-lg-3 col-sm-6 ">
+                    <div key={element.id} className="col-md-4 col-lg-3 col-sm-6 mb-1">
                         <div className="rating-card" onClick={() => SkillsInfo(element.name, element.description)} data-id="0">
                             <h3>{element.name}</h3>
                             <div className="progress">
                                 <div className="progress-bar" style={{ width: (element.rating * 10) + "%" }}>
-                                    <span className="sr-only">70% Complete</span>
+                                    <span className="sr-only">Rating: {element.rating} out of 10.</span>
                                 </div>
                             </div>
                         </div>
