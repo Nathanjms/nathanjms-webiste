@@ -19,15 +19,19 @@ function About() {
                         element={"h4"}
                         getBeforeInit={instance => {
                             instance
-                                .type("I'm a Junior Software Developer")
+                                .type("I'm a Software Developer")
                                 .pause(750)
-                                .delete(25)
+                                .delete(18)
                                 .pause(250)
                                 .type("Musician")
                                 .pause(750)
                                 .delete(8)
                                 .pause(250)
                                 .type("Mathematician")
+                                .pause(750)
+                                .delete(13)
+                                .pause(250)
+                                .type("Web Developer")
                                 .pause(250);
                             return instance;
                         }}

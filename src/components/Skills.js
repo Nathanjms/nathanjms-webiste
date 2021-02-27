@@ -1,15 +1,19 @@
 import React from 'react';
-// import skillsData from './SkillsData.json';
+import SkillsList, { AdditionalSkillsList } from './SkillsList'
 
 function Skills() {
-    // console.log(skillsData);
     return (
         <div className="container">
             <div className="intro-section">
-                <h1>Skills</h1>
-                <p>
-                    Coming Soon...
-                </p>
+                <div>
+                    <h1>Skills</h1>
+                    <p>Click any of the ratings below to see a bit more information about my experience with each language!</p>
+                    <SkillsList />
+                </div>
+                <div className="pt-5">
+                    <h3 className="pb-3">Additional Skills</h3>
+                    <AdditionalSkillsList />
+                </div>
             </div>
         </div>
     );

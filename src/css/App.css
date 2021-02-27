@@ -2,11 +2,15 @@
   text-align: center;
 }
 
+a {
+  color: #7b26ad
+}
+
 
 #home {
   background-color: #282c34;
   min-height: 50vh;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   color: #f9f9f9;
@@ -92,7 +96,7 @@ to {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .navBar > ul > li {
@@ -164,6 +168,10 @@ to {
   color: #fff !important;
 }
 
+.mobile-button {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .navBar a {
     margin-bottom: 20px;
@@ -187,7 +195,8 @@ to {
   .navBar ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    margin-bottom: 1rem;
   }
   .navBar a span {
     display: none;
@@ -198,3 +207,18 @@ to {
   } 
 }
 
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+.progress-bar {
+  background-color: #7b26ad;
+}
+
+.rating-card {
+  padding: 20px;
+  margin: 10px;
+  background-color: #3d4148;
+  border-radius: 15px;
+  cursor: pointer;
+}
