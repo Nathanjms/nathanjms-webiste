@@ -1,18 +1,18 @@
 import React from 'react';
-import { FaBars, FaPersonBooth } from 'react-icons/fa'
+import { FaBars, FaHome, FaMusic, FaUser } from 'react-icons/fa'
 
 function App() {
     return (
         <>
             <nav className="nav-menu">
                 <ul>
-                    <li className="active"><a href="index.html"><FaPersonBooth /><span>Home</span></a></li>
-                    <li><a href="#about"><FaPersonBooth /><span>About</span></a></li>
-                    <li><a href="#resume"><FaPersonBooth /><span>Resume</span></a></li>
+                    <li className="active"><a href="/"><FaHome /><span>Home</span></a></li>
+                    <li><a href="#about"><FaUser /><span>About</span></a></li>
+                    <li><a href="#resume"><FaMusic /><span>Music</span></a></li>
 
                 </ul>
             </nav>
-            <button type="button" class="mobile-nav-toggle d-xl-none"><FaBars /></button>
+            <FaBars className="mobile-nav-toggle d-xl-none" color="white" />
         </>
     );
 }
