@@ -10,7 +10,6 @@ function Home() {
                 <p>
                     Coming Soon...
                 </p>
-                <button className="btn btn-primary">Click Me</button>
             </div>
         </div>
     );
