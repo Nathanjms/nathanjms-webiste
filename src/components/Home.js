@@ -11,7 +11,7 @@ function Home() {
                     <h1>Nathan James</h1>
                     <div style={{ paddingTop: "10px" }}>
                         <a className="button-logos" href="https://github.com/Nathanjms/"><FaGithub /></a>
-                        <a className="button-logos" href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"><FaYoutube /></a>
+                        <a className="button-logos" href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"><FaYoutube color="#ff0000" /></a>
                     </div>
                 </div>
             </div>
