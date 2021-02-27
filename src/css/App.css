@@ -90,6 +90,9 @@ to {
 
 .navBar {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .navBar > ul > li {
@@ -99,45 +102,18 @@ to {
   display: inline;
 }
 
-.navBar a {
+.navBar a  {
   display: flex;
   align-items: center;
-  color: #45505b;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  transition: 0.3s;
-  font-size: 15px;
-  border-radius: 20px;
-  background: #f2f3f5;
-  height: 56px;
-  width: 100%;
-  overflow: hidden;
-  transition: 0.3s;
-  width: 56px;
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .navBar a span {
-    display: none;
-    color: #fff;
-  }
-  .navBar a:hover span, .navBar li:hover > a span {
-    display: block;
-  }
+.mobile-button {
+  align-items: flex-start;
 }
 
-@media (max-width: 767px) {
-
-  .navBar ul {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .navBar a span {
-    display: none;
-    color: #fff;
-  }
-  
+.navBar a:hover span, .navBar li:hover > a span {
+  display: block;
 }
 
 .navBar a i {
@@ -163,4 +139,51 @@ to {
   color: #fff;
 }
 
+.button-shape {
+  color: #45505b;
+  padding: 10px 20px;
+  transition: 0.3s;
+  font-size: 15px;
+  border-radius: 20px;
+  background: #f2f3f5;
+  height: 56px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 56px;
+}
+
+@media (min-width: 768px) {
+  .navBar a {
+    margin-bottom: 20px;
+  }
+  .navBar a span {
+    display: none;
+    color: #fff;
+  }
+  .navBar a:hover span, .navBar li:hover > a span {
+    display: block;
+  }
+  .mobile-button {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navBar a {
+    margin-bottom: 5px;
+  }
+  .navBar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navBar a span {
+    display: none;
+    color: #fff;
+  }
+  .hide-nav {
+    display: none !important;
+  } 
+}
 
