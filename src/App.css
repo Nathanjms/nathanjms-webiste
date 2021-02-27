@@ -10,21 +10,39 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f9f9f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #about {
-  background-color: #f9f9f9;
+  background-color: #3d4148;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #282c34;
+  color: #f9f9f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#music {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f9f9f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .intro-section img{
+  padding-top: 30px;
   border-radius: 100%;
   width: 30%;
   padding-bottom: 30px;
@@ -86,6 +104,7 @@ to {
 .nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
+  border-color: #282c34;
 }
 
 .nav-menu a {
@@ -158,7 +177,7 @@ to {
 }
 
 .mobile-nav-toggle i {
-  color: #45505b;
+  color: #f9f9f9;
 }
 
 .mobile-nav-active {
