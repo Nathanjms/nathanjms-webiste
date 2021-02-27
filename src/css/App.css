@@ -2,11 +2,15 @@
   text-align: center;
 }
 
+a {
+  color: #7b26ad
+}
+
 
 #home {
   background-color: #282c34;
   min-height: 50vh;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   color: #f9f9f9;
@@ -203,3 +207,17 @@ to {
   } 
 }
 
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+.progress-bar {
+  background-color: #7b26ad;
+}
+
+.rating-card {
+  padding: 20px;
+  margin: 10px;
+  background-color: #3d4148;
+  border-radius: 15px;
+}
