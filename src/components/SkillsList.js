@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About() {
+function skillsList() {
     return (
         <div className="container">
             <div className="intro-section">
@@ -14,4 +14,4 @@ function About() {
     );
 }
 
-export default About;
+export default skillsList;
