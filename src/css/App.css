@@ -16,13 +16,13 @@
 
 .main-body-sections {
   background-color: #3d4148;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #f9f9f9;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #skills {
@@ -133,6 +133,16 @@ to {
 .navBar a:hover, .navBar li:hover > a {
   width: 100%;
   color: #fff;
+}
+
+.button-logos {
+  color: #45505b;
+  padding: 10px 12px;
+  transition: 0.3s;
+  border-radius: 20px;
+  background: #f2f3f5;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .button-shape {
