@@ -60,7 +60,7 @@ function NavBar() {
                         })
                     }
                 </ul>
-                <li onClick={toggle} > <button className={hideNav ? "btn button-shape mobile-button" : "btn button-shape mobile-button clicked"}><FaBars /></button></li>
+                <li onClick={toggle} > <button className={hideNav ? "btn button-shape mobile-button" : "btn button-shape mobile-button btn-clicked"}><FaBars /></button></li>
             </nav>
         </>
     );

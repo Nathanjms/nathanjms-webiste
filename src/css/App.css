@@ -112,6 +112,7 @@ to {
   align-items: flex-start;
 }
 
+
 .navBar a:hover span, .navBar li:hover > a span {
   display: block;
 }
@@ -151,6 +152,12 @@ to {
   overflow: hidden;
   transition: 0.3s;
   width: 56px;
+}
+
+
+.btn-clicked {
+  background-color: #7b26ad;
+  color: #fff !important;
 }
 
 @media (min-width: 768px) {
