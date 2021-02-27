@@ -1,8 +1,8 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Music from './components/Music';
+import '../css/App.css';
+import Navbar from './Navbar';
+import Home from './Home';
+import About from './About';
+import Music from './Music';
 
 
 function App() {

@@ -8,7 +8,7 @@ function App() {
                 <ul>
                     <li className="active"><a href="/"><FaHome /><span>Home</span></a></li>
                     <li><a href="#about"><FaUser /><span>About</span></a></li>
-                    <li><a href="#resume"><FaMusic /><span>Music</span></a></li>
+                    <li><a href="#music"><FaMusic /><span>Music</span></a></li>
 
                 </ul>
             </nav>
