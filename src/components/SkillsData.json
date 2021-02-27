@@ -1,0 +1,43 @@
+{
+    "languages": [
+        {
+            "name": "PHP",
+            "rating": "8",
+            "description": "The main language I use within my job - I have gone from knowing nothing about PHP, to feeling very confident in it."
+        },
+        {
+            "name": "React",
+            "rating": "7",
+            "description": "The language the website has been built in! I've taken multiple online courses in React and am learning all of the time!"
+        },
+        {
+            "name": "SQL",
+            "rating": "7",
+            "description": "The language the website has been built in! I've taken multiple online courses in React and am learning all of the time!"
+        },
+        {
+            "name": "JavaScript",
+            "rating": "7",
+            "description": "The language the website has been built in! I've taken multiple online courses in React and am learning all of the time!"
+        }
+    ],
+    "additional": [
+        {
+            "name": "Github",
+            "rating": "8",
+            "description": "It's time for this rabbit's post spaying surgery checkup"
+        }
+    ],
+    "bonus": [
+        {
+            "name": "C#",
+            "rating": "N/A",
+            "description": "It's time for this rabbit's post spaying surgery checkup"
+        },
+        {
+            "name": "Python",
+            "rating": "N/A",
+            "description": "It's time for this rabbit's post spaying surgery checkup"
+        }
+    ]
+}

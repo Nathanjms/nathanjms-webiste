@@ -1,8 +1,6 @@
 import React from 'react';
-import skillsData from './SkillsData.json';
 
-function skills() {
-    console.log(skillsData);
+function skillsList() {
     return (
         <div className="container">
             <div className="intro-section">
@@ -16,4 +14,4 @@ function skills() {
     );
 }
 
-export default skills;
+export default skillsList;
