@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaDesktop, FaHome, FaMusic, FaUser } from 'react-icons/fa'
+import React, { useReducer } from 'react';
+import { FaDesktop, FaHome, FaMusic, FaUser, FaBars } from 'react-icons/fa'
 
 // function App() {
 //     return (
@@ -44,16 +44,23 @@ const li = [
 ];
 
 function NavBar() {
+
+    const [hideNav, toggle] = useReducer(
+        (hideNav) => !hideNav,
+        true
+    );
+
     return (
         <>
             <nav className="navBar">
-                <ul className="links">
+                <ul className={hideNav ? "links hide-nav" : "links"}>
                     {
                         li.map((objLink, i) => {
-                            return (<li key={i}><a href={objLink.link}>{objLink.icon}<span>{objLink.text}</span></a></li>)
+                            return (<li key={i}><a className="button-shape" href={objLink.link}>{objLink.icon}<span>{objLink.text}</span></a></li>)
                         })
                     }
                 </ul>
+                <li onClick={toggle} > <button className={hideNav ? "btn button-shape mobile-button" : "btn button-shape mobile-button clicked"}><FaBars /></button></li>
             </nav>
         </>
     );
