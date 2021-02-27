@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/App.css';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -7,14 +8,19 @@ import Skills from './Skills';
 
 
 function App() {
+
   return (
+
     <div className="App">
-      <header id="header" className="d-flex flex-column justify-content-center">
+
+      <header id="header" className="d-flex">
         <Navbar />
       </header>
+
       <section id="home">
         <Home />
       </section>
+
       <main>
         <section id="about" className="main-body-sections">
           <About />
@@ -26,8 +32,8 @@ function App() {
           <Music />
         </section>
       </main>
+
     </div >
   );
 }
-
 export default App;

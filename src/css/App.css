@@ -54,8 +54,6 @@ to {
 --------------------------------------------------------------*/
 #header {
   position: fixed;
-  top: 0;
-  left: 0;
   bottom: 0;
   z-index: 9997;
   transition: all 0.5s;
@@ -63,18 +61,20 @@ to {
   overflow-y: auto;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) {
   #header {
-    width: 300px;
-    background: #fff;
-    border-right: 1px solid #e6e9ec;
-    left: -300px;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
   }
 }
 
-@media (min-width: 992px) {
-  #main {
-    margin-left: 100px;
+@media (max-width: 767px) {
+  #header {
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 }
 
@@ -82,20 +82,24 @@ to {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
-.nav-menu * {
+.navBar * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.navBar {
+  width: 100%;
+}
+
+.navBar > ul > li {
   position: relative;
   white-space: nowrap;
   border-color: #282c34;
+  display: inline;
 }
 
-.nav-menu a {
+.navBar a {
   display: flex;
   align-items: center;
   color: #45505b;
@@ -109,73 +113,54 @@ to {
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
+  width: 56px;
+  text-decoration: none;
 }
 
-.nav-menu a i {
+@media (min-width: 768px) {
+  .navBar a span {
+    display: none;
+    color: #fff;
+  }
+  .navBar a:hover span, .navBar li:hover > a span {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .navBar ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navBar a span {
+    display: none;
+    color: #fff;
+  }
+  
+}
+
+.navBar a i {
   font-size: 20px;
 }
 
-.nav-menu a span {
+.navBar a span {
   padding: 0 5px 0 7px;
   color: #45505b;
 }
 
-@media (min-width: 992px) {
-  .nav-menu a {
-    width: 56px;
-  }
-  .nav-menu a span {
-    display: none;
-    color: #fff;
-  }
-}
-
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.navBar a:hover, .navBar .active > a, .navBar li:hover > a {
   color: #fff;
   background: #7b26ad;
 }
 
-.nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
+.navBar a:hover span, .navBar .active > a span, .navBar li:hover > a span {
   color: #fff;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a {
+.navBar a:hover, .navBar li:hover > a {
   width: 100%;
   color: #fff;
 }
 
-.nav-menu a:hover span, .nav-menu li:hover > a span {
-  display: block;
-}
 
-/* Mobile Navigation */
-.mobile-nav-toggle {
-  position: fixed;
-  left: 15px;
-  bottom: 15px;
-  z-index: 9998;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  line-height: 1;
-  cursor: pointer;
-  text-align: right;
-}
-
-.mobile-nav-toggle i {
-  color: #f9f9f9;
-}
-
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active #header {
-  left: 0;
-}
-
-.mobile-nav-active .mobile-nav-toggle i {
-  color: #7b26ad;
-}

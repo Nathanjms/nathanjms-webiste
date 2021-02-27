@@ -1,6 +1,6 @@
 import React from 'react';
 
-function music() {
+function About() {
     return (
         <div className="container">
             <div className="intro-section">
@@ -14,4 +14,4 @@ function music() {
     );
 }
 
-export default music;
+export default About;
