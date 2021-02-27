@@ -1,5 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Music from './components/Music';
 
 
 function App() {
@@ -8,13 +11,17 @@ function App() {
       <header id="header" className="d-flex flex-column justify-content-center">
         <Navbar />
       </header>
-      <div className="intro-section">
-        <h1>Nathan James.</h1>
-        <p>
-          Coming Soon...
-        </p>
-        <button className="btn btn-primary">Click Me</button>
-      </div>
+      <section id="home">
+        <Home />
+      </section>
+      <main>
+        <section id="about">
+          <About />
+        </section>
+        <section id="music">
+          <Music />
+        </section>
+      </main>
     </div >
   );
 }
