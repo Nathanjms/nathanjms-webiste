@@ -8,37 +8,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: #f9f9f9;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-#about {
+.main-body-sections {
   background-color: #3d4148;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: #f9f9f9;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-#music {
+#skills {
   background-color: #282c34;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #f9f9f9;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .intro-section img{
@@ -144,7 +131,7 @@ to {
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #fff;
-  background: #0563bb;
+  background: #7b26ad;
 }
 
 .nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
@@ -189,5 +176,5 @@ to {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #0563bb;
+  color: #7b26ad;
 }
