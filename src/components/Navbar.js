@@ -1,25 +1,6 @@
 import React, { useReducer } from 'react';
 import { FaDesktop, FaHome, FaMusic, FaUser, FaBars } from 'react-icons/fa'
 
-// function App() {
-//     return (
-//         <>
-//             <nav className="nav-menu">
-//                 <ul>
-//                     <li className="active"><a href="/"><FaHome /><span>Home</span></a></li>
-//                     <li><a href="#about"><FaUser /><span>About</span></a></li>
-//                     <li><a href="#skills"><FaUser /><span>Skills</span></a></li>
-//                     <li><a href="#music"><FaMusic /><span>Music</span></a></li>
-
-//                 </ul>
-//             </nav>
-//             <FaBars className="mobile-nav-toggle d-xl-none" color="white" />
-//         </>
-//     );
-// }
-
-// export default App;
-
 const li = [
     {
         link: "#home",
@@ -60,7 +41,7 @@ function NavBar() {
                         })
                     }
                 </ul>
-                <li onClick={toggle} > <button className={hideNav ? "btn button-shape mobile-button" : "btn button-shape mobile-button clicked"}><FaBars /></button></li>
+                <li onClick={toggle} > <button className={hideNav ? "btn button-shape mobile-button" : "btn button-shape mobile-button btn-clicked"}><FaBars /></button></li>
             </nav>
         </>
     );
