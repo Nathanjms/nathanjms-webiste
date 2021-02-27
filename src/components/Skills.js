@@ -2,7 +2,7 @@ import React from 'react';
 import skillsData from './SkillsData.json';
 
 function Skills() {
-    console.log(skillsData);
+    // console.log(skillsData);
     return (
         <div className="container">
             <div className="intro-section">
