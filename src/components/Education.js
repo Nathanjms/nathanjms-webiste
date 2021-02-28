@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 function Education() {
     return (
         <div className="container">
-            <div className="intro-section">
+            <div>
 
                 <h1>Education</h1>
                 <div className="education-card">
@@ -14,7 +14,8 @@ function Education() {
                         <p>1st Class, University of Nottingham</p>
                     </div>
                     <p>
-                        Integrated Master's in Mathematics, with a particular focus on Applied Mathematics; such as Mathematical Biology and Computational Mathematics.
+                        At university, I did a 4-year Integrated Master's in Mathematics. I particular focussed on Applied Mathematics; such as Mathematical Biology and Computational Mathematics.
+                        Click the headers below to see more details.
                     </p>
                     <Accordion defaultActiveKey="0">
                         <div>
@@ -25,7 +26,29 @@ function Education() {
                             </div>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    Hello! I'm the body
+                                    <div class="row">
+                                        <div className="col-md-6">
+                                            <p>
+                                                My dissertation involved developing a computational Mathematical model to investigate chemokine gradient development in interstitial tissues.
+                                                I focused on three main biological factors (CCL21 binding/unbinding, diffusion of CCL21, and dendritic cell cleaving) and converted them into Mathematical models.
+                                            </p>
+                                            <p>
+                                                My dissertation enabled me to combine my interest in both programming and Maths to come up with a suitable model that conclusions
+                                                could be drawn from.
+                                            </p>
+                                            <p>
+                                                I used the programming language MATLAB to simulate the model computationally and to produce a time-dependent animation and results. Despite the
+                                                simplifications made throughout the model building process, there was reasonably good agreement with experimental data.
+                                            </p>
+                                            <p>
+                                                The code can be found <a href="https://github.com/Nathanjms/G14DIS-Code">on my GitHub</a>.
+                                            </p>
+                                        </div>
+                                        <div className="col-md-6 text-align-center">
+                                            <img src="/9PlotsInOneCleaving.png" alt="Figure from my dissertation" style={{ width: '80%' }} />
+                                        </div>
+                                    </div>
+
                                 </Card.Body>
                             </Accordion.Collapse>
                         </div>
@@ -37,7 +60,45 @@ function Education() {
                             </div>
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
-                                    Hello! I'm another body
+                                    <p>
+                                        My third year project was a lot more Mathematical than my dissertation. It involved developing the Theory of Geometrical Diffraction from the wave equation,
+                                        and then applying it to the scattering of waves in a parabola, as well as a circle.
+                                    </p>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </div>
+                        <div>
+                            <div className="edu-accord-header">
+                                <Accordion.Toggle as={Card.Header} variant="link" eventKey="2">
+                                    <strong>Modules</strong>
+                                </Accordion.Toggle>
+                            </div>
+                            <Accordion.Collapse eventKey="2">
+                                <Card.Body>
+                                    <p>
+                                        <strong>Fourth Year:</strong>
+                                        <ul>
+                                            <li>Dissertation: Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</li>
+                                            <li>Scientific Computing and C++ </li>
+                                            <li>Advanced Techniques for Differential Equations </li>
+                                            <li>Topics in Biomedical Mathematics</li>
+                                            <li>Fluid Dynamics </li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        <strong>Third Year:</strong>
+                                        <ul>
+                                            <li>Project: The Geometrical Theory of Diffraction</li>
+                                            <li>Differential Equations</li>
+                                            <li>Electromagnetism </li>
+                                            <li>Scientific Computation and Numerical Analysis </li>
+                                            <li>Advanced Quantum Theory</li>
+                                            <li>Mathematical Medicine and Biology</li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        Topics in my first two years involved mostly applied and computational maths along with some statistics, and even a module in German.
+                                    </p>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </div>

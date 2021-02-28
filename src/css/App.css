@@ -241,14 +241,14 @@ to {
 .edu-accord-header {
   background-color: #3d4148;
   margin-top: 1rem;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   text-align: left;
   width: 100%;
+  cursor: pointer;
 }
-.edu-accord-body {
+
+.card-body {
   background-color: #3d4148;
-  margin-top: 0;
-  text-align: left;
-  width: 80%;
+  border-radius: 0 0 10px 10px;
 }
 
