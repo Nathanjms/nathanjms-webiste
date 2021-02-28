@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import Music from './Music';
 import Skills from './Skills';
+import Education from './Education';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
         </section>
         <section id="skills" className="main-body-sections">
           <Skills />
+        </section>
+        <section id="education" className="main-body-sections">
+          <Education />
         </section>
         <section id="music" className="main-body-sections">
           <Music />

@@ -45,7 +45,7 @@ function About() {
                         </p>
                         <p>
                             This website was mostly made to try creating a website using <a href="https://reactjs.org/">React</a>, something I've been learning in my spare time.
-                            You can find the code on <a href="https://github.com/nathanjms">my GitHub</a>.
+                            You can find the code on <a href="https://github.com/nathanjms" target="_blank" rel="noopener noreferrer">my GitHub</a>.
                         </p>
                     </div>
                 </div>

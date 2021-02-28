@@ -1,4 +1,4 @@
-import { FaHome, FaMusic, FaUser } from 'react-icons/fa';
+import { FaHome, FaMusic, FaUser, FaUserGraduate } from 'react-icons/fa';
 import { GiProgression } from 'react-icons/gi';
 
 const navItems = [
@@ -16,6 +16,11 @@ const navItems = [
         "link": "#skills",
         "text": "Skills",
         "icon": <GiProgression />
+    },
+    {
+        "link": "#education",
+        "text": "Education",
+        "icon": <FaUserGraduate />
     },
     {
         "link": "#music",
