@@ -32,7 +32,6 @@ function About() {
                                 .delete(13)
                                 .pause(250)
                                 .type("Web Developer")
-                                .pause(250);
                             return instance;
                         }}
                     />

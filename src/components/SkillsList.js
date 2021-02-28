@@ -5,7 +5,7 @@ function SkillsInfo(skillName, desc) {
     Swal.fire({
         title: skillName,
         text: desc,
-        timer: 4500,
+        timer: 6000,
         timerProgressBar: true,
         showConfirmButton: false,
     })
