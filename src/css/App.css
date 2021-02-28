@@ -211,6 +211,9 @@ to {
 # Skills
 --------------------------------------------------------------*/
 
+.progress {
+  height: 0.25rem;
+}
 .progress-bar {
   background-color: #7b26ad;
 }
