@@ -18,7 +18,7 @@ function SkillsList({ skillsData }) {
             <div className="row justify-content-center">
                 {skillsData.map(element => (
 
-                    <div key={element.id} className="col-lg-3 col-sm-6 mb-1">
+                    <div key={element.id} className="col-sm-6 col-lg-3 mb-1">
                         <div className="rating-card" onClick={() => SkillsInfo(element.name, element.description)} data-id="0">
                             <h3>{element.name}</h3>
                             <div className="progress">

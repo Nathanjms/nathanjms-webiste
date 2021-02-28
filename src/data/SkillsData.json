@@ -83,6 +83,12 @@
             "name": "LaTeX",
             "rating": "9",
             "description": "Used to write both my project and final-year dissertation at university, I became very fluent in using LaTeX. My preferred way to access it was the online editor Overleaf"
+        },
+        {
+            "id": 6,
+            "name": "Hardware",
+            "rating": "7",
+            "description": "Having built my first computer over 6 years ago, I have always had an interest in computer hardware. I've now built over 10 computers and regularly update their components to keep them up to date!"
         }
     ]
 }
