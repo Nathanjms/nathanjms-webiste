@@ -4,7 +4,10 @@ import Swal from 'sweetalert2';
 function SkillsInfo(skillName, desc) {
     Swal.fire({
         title: skillName,
-        text: desc
+        text: desc,
+        timer: 4500,
+        timerProgressBar: true,
+        showConfirmButton: false,
     })
 }
 

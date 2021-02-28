@@ -5,7 +5,7 @@
                 "id": 1,
                 "name": "PHP",
                 "rating": "7",
-                "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it as well as I know MATLAB."
+                "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it as well as MATLAB, my strongest programming language."
             },
             {
                 "id": 2,
@@ -23,7 +23,7 @@
                 "id": 4,
                 "name": "JavaScript",
                 "rating": "6.5",
-                "description": "A language that I'm slowly coming to terms with, with the help of react! Often I use jQuery instead of pure Javascript (or a combination of the two)."
+                "description": "A language that I'm slowly coming to terms with, with the help of React. Often I use jQuery instead of pure Javascript (or a combination of the two)."
             }
         ],
         "other": [
@@ -49,7 +49,7 @@
                 "id": 4,
                 "name": "Python",
                 "rating": "4.5",
-                "description": "A language I've never formally 'learnt', whenever I have come across Python I have more-or-less followed along and is one I have in my sights to learn more about!"
+                "description": "A language I've never formally 'learnt'. Whenever I have come across Python, I more-or-less follow along, and it is a programming language that I have in my sights on!"
             }
         ]
     },
@@ -63,20 +63,26 @@
         {
             "id": 2,
             "name": "jQuery",
-            "rating": "6",
-            "description": "Arguable the syntax I had the most trouble understanding initially, I now am confident in jQuery and much prefer it to regular JavaScript."
+            "rating": "6.5",
+            "description": "Arguable the syntax I had the most trouble understanding initially, I now am confident in using jQuery and much prefer it to regular JavaScript."
         },
         {
             "id": 3,
             "name": "CodeIgniter",
-            "rating": "7",
-            "description": "The Framework I work on in my job, I have developed an understanding of the framework and will continue to do so as I work closely with it."
+            "rating": "6",
+            "description": "The Framework I work on in my job, I have developed an understanding of the framework and will continue to learn it in more detail I work closely with it."
         },
         {
             "id": 4,
             "name": "Laravel",
             "rating": "3",
             "description": "A Framework I'm very interested in learning, so I have started an online course in the latest version."
+        },
+        {
+            "id": 5,
+            "name": "LaTeX",
+            "rating": "9",
+            "description": "Used to write both my project and final-year dissertation at university, I became very fluent in using LaTeX. My preferred way to access it was the online editor Overleaf"
         }
     ]
 }
