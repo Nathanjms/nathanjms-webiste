@@ -14,8 +14,10 @@ function Education() {
                         <p>1st Class, University of Nottingham</p>
                     </div>
                     <p>
-                        At university, I did a 4-year Integrated Master's in Mathematics. I particular focussed on Applied Mathematics; such as Mathematical Biology and Computational Mathematics.
-                        Click the headers below to see more details.
+                        At university, I did a 4-year Integrated Master's in Mathematics. My modules focussed on Applied Mathematics; such as Mathematical Biology and Computational Mathematics.
+                    </p>
+                    <p>
+                        Click the headers below to see more details!
                     </p>
                     <Accordion defaultActiveKey="0">
                         <div>
@@ -26,7 +28,7 @@ function Education() {
                             </div>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    <div class="row">
+                                    <div className="row">
                                         <div className="col-md-6">
                                             <p>
                                                 My dissertation involved developing a computational Mathematical model to investigate chemokine gradient development in interstitial tissues.
@@ -44,7 +46,7 @@ function Education() {
                                                 The code can be found <a href="https://github.com/Nathanjms/G14DIS-Code">on my GitHub</a>.
                                             </p>
                                         </div>
-                                        <div className="col-md-6 text-align-center">
+                                        <div className="col-md-6" style={{ textAlign: 'center' }}>
                                             <img src="/9PlotsInOneCleaving.png" alt="Figure from my dissertation" style={{ width: '80%' }} />
                                         </div>
                                     </div>
@@ -77,25 +79,25 @@ function Education() {
                                 <Card.Body>
                                     <p>
                                         <strong>Fourth Year:</strong>
-                                        <ul>
-                                            <li>Dissertation: Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</li>
-                                            <li>Scientific Computing and C++ </li>
-                                            <li>Advanced Techniques for Differential Equations </li>
-                                            <li>Topics in Biomedical Mathematics</li>
-                                            <li>Fluid Dynamics </li>
-                                        </ul>
                                     </p>
+                                    <ul>
+                                        <li>Dissertation: Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</li>
+                                        <li>Scientific Computing and C++ </li>
+                                        <li>Advanced Techniques for Differential Equations </li>
+                                        <li>Topics in Biomedical Mathematics</li>
+                                        <li>Fluid Dynamics </li>
+                                    </ul>
                                     <p>
                                         <strong>Third Year:</strong>
-                                        <ul>
-                                            <li>Project: The Geometrical Theory of Diffraction</li>
-                                            <li>Differential Equations</li>
-                                            <li>Electromagnetism </li>
-                                            <li>Scientific Computation and Numerical Analysis </li>
-                                            <li>Advanced Quantum Theory</li>
-                                            <li>Mathematical Medicine and Biology</li>
-                                        </ul>
                                     </p>
+                                    <ul>
+                                        <li>Project: The Geometrical Theory of Diffraction</li>
+                                        <li>Differential Equations</li>
+                                        <li>Electromagnetism </li>
+                                        <li>Scientific Computation and Numerical Analysis </li>
+                                        <li>Advanced Quantum Theory</li>
+                                        <li>Mathematical Medicine and Biology</li>
+                                    </ul>
                                     <p>
                                         Topics in my first two years involved mostly applied and computational maths along with some statistics, and even a module in German.
                                     </p>
