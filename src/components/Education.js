@@ -5,9 +5,14 @@ function Education() {
         <>
             <div className="intro-section">
                 <h1>Education</h1>
-                <p>
-                    Coming Soon...
-                </p>
+                <div className="education-card">
+                    <h3>Integrated Master's in Mathematics</h3>
+                    <p>University of Nottingham</p>
+                    <p>
+                        Coming Soon...
+                    </p>
+                </div>
+
             </div>
         </>
     );

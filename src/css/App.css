@@ -221,3 +221,15 @@ to {
   border-radius: 15px;
   cursor: pointer;
 }
+
+/*--------------------------------------------------------------
+# Education
+--------------------------------------------------------------*/
+.education-card {
+  padding: 20px;
+  margin: 10px;
+  background-color: #282c34;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: left;
+}
