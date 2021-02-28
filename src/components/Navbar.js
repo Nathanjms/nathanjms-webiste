@@ -1,28 +1,6 @@
 import React, { useReducer } from 'react';
-import { FaDesktop, FaHome, FaMusic, FaUser, FaBars } from 'react-icons/fa'
-
-const li = [
-    {
-        link: "#home",
-        text: "Home",
-        icon: <FaHome />,
-    },
-    {
-        link: "#about",
-        text: "About",
-        icon: <FaUser />,
-    },
-    {
-        link: "#skills",
-        text: "Skills",
-        icon: <FaDesktop />,
-    },
-    {
-        link: "#music",
-        text: "Music",
-        icon: <FaMusic />,
-    }
-];
+import { FaBars } from 'react-icons/fa'
+import navItems from './NavItems';
 
 function NavBar() {
 
@@ -35,7 +13,7 @@ function NavBar() {
         <nav className="navBar">
             <ul className={hideNav ? "links hide-nav" : "links"}>
                 {
-                    li.map((objLink, i) => {
+                    navItems.map((objLink, i) => {
                         return (<li key={i}><a className="button-shape" href={objLink.link}>{objLink.icon}<span>{objLink.text}</span></a></li>)
                     })
                 }
