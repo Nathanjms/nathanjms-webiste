@@ -9,6 +9,7 @@ function Home() {
                 <img src={nathan_img} alt="Nathan" />
                 <div>
                     <h1>Nathan James</h1>
+                    <p>nathan@nathanjms.co.uk</p>
                     <div style={{ paddingTop: "10px" }}>
                         <a className="button-logos" href="https://github.com/Nathanjms/"><FaGithub /></a>
                         <a className="button-logos" href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"><FaYoutube color="#ff0000" /></a>
