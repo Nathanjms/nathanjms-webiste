@@ -8,7 +8,7 @@ function Skills() {
             <div className="intro-section">
                 <div>
                     <h1>Skills</h1>
-                    <p>Click any of the ratings below to see a bit more information about my experience with each language!</p>
+                    <p>Click any of the ratings below to see a bit more information about my experience with each!</p>
 
                 </div>
                 <div className="pt-5">
