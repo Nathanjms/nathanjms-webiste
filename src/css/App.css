@@ -29,6 +29,10 @@
   background-color: #282c34;
 }
 
+#music {
+  min-height: 50vh;
+}
+
 .intro-section img{
   padding-top: 30px;
   border-radius: 100%;
