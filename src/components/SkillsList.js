@@ -20,7 +20,7 @@ function SkillsList({ skillsData }) {
 
                     <div key={element.id} className="col-sm-6 col-lg-3 mb-1">
                         <div className="rating-card" onClick={() => SkillsInfo(element.name, element.description)} data-id="0">
-                            <h3>{element.name}</h3>
+                            <h5>{element.name}</h5>
                             <div className="progress">
                                 <div className="progress-bar" style={{ width: (element.rating * 10) + "%" }}>
                                     <span className="sr-only">Rating: {element.rating} out of 10.</span>
