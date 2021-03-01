@@ -44,7 +44,7 @@ function Music() {
                     </p>
                     <p>
                         You'll find another one of my songs as the backing to one of my <a href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw">Youtube videos</a>,
-                         but these are the only ones in the wild, <span onClick={() => ForNow()} style={{ cursor: "pointer" }}><i> for now...</i></span>,
+                         but these are the only ones in the wild, <span onClick={() => ForNow()} style={{ cursor: "pointer" }}><i> for now...</i></span>
                     </p>
                     <p hidden id="music-additional">
                         Writing songs is something I really enjoy doing and I would love to add to the song below if I can record any others to a good quality... stay tuned!
