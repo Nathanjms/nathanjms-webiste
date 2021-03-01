@@ -14,19 +14,54 @@ function Education() {
                         <p>1st Class, University of Nottingham</p>
                     </div>
                     <p>
-                        At university, I did a 4-year Integrated Master's in Mathematics. My modules focussed on Applied Mathematics; such as Mathematical Biology and Computational Mathematics.
+                        At university, I undertook a 4-year Integrated Master's in Mathematics. My modules focussed on Applied Mathematics, such as Mathematical Biology and Computational Mathematics.
                     </p>
                     <p>
                         Click the headers below to see more details!
                     </p>
                     <Accordion defaultActiveKey="0">
                         <div>
+                            <div>
+                                <div className="edu-accord-header">
+                                    <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+                                        <strong>Modules</strong>
+                                    </Accordion.Toggle>
+                                </div>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>
+                                        <p>
+                                            <strong>Fourth Year:</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Dissertation: <i>Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</i></li>
+                                            <li>Scientific Computing and C++ </li>
+                                            <li>Advanced Techniques for Differential Equations </li>
+                                            <li>Topics in Biomedical Mathematics</li>
+                                            <li>Fluid Dynamics </li>
+                                        </ul>
+                                        <p>
+                                            <strong>Third Year:</strong>
+                                        </p>
+                                        <ul>
+                                            <li>Project: <i>The Geometrical Theory of Diffraction</i></li>
+                                            <li>Differential Equations</li>
+                                            <li>Electromagnetism </li>
+                                            <li>Scientific Computation and Numerical Analysis </li>
+                                            <li>Advanced Quantum Theory</li>
+                                            <li>Mathematical Medicine and Biology</li>
+                                        </ul>
+                                        <p>
+                                            Topics in my first two years involved mostly applied and computational maths along with some statistics, and even a module in German.
+                                    </p>
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </div>
                             <div className="edu-accord-header">
-                                <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+                                <Accordion.Toggle as={Card.Header} variant="link" eventKey="1">
                                     <strong>Dissertation:</strong> <i>Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</i>
                                 </Accordion.Toggle>
                             </div>
-                            <Accordion.Collapse eventKey="0">
+                            <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     <div className="row">
                                         <div className="col-md-6">
@@ -56,50 +91,15 @@ function Education() {
                         </div>
                         <div>
                             <div className="edu-accord-header">
-                                <Accordion.Toggle as={Card.Header} variant="link" eventKey="1">
-                                    <strong>Project:</strong> <i>The Geometrical Theory of Diffraction</i>
-                                </Accordion.Toggle>
-                            </div>
-                            <Accordion.Collapse eventKey="1">
-                                <Card.Body>
-                                    <p>
-                                        My third year project was a lot more Mathematical than my dissertation. It involved developing the Theory of Geometrical Diffraction from the wave equation,
-                                        and then applying it to the scattering of waves in a parabola, as well as a circle.
-                                    </p>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </div>
-                        <div>
-                            <div className="edu-accord-header">
                                 <Accordion.Toggle as={Card.Header} variant="link" eventKey="2">
-                                    <strong>Modules</strong>
+                                    <strong>Project:</strong> <i>The Geometrical Theory of Diffraction</i>
                                 </Accordion.Toggle>
                             </div>
                             <Accordion.Collapse eventKey="2">
                                 <Card.Body>
                                     <p>
-                                        <strong>Fourth Year:</strong>
-                                    </p>
-                                    <ul>
-                                        <li>Dissertation: Chemokine Gradient and Dendritic Cell Migration in Lymphatic Interstitium</li>
-                                        <li>Scientific Computing and C++ </li>
-                                        <li>Advanced Techniques for Differential Equations </li>
-                                        <li>Topics in Biomedical Mathematics</li>
-                                        <li>Fluid Dynamics </li>
-                                    </ul>
-                                    <p>
-                                        <strong>Third Year:</strong>
-                                    </p>
-                                    <ul>
-                                        <li>Project: The Geometrical Theory of Diffraction</li>
-                                        <li>Differential Equations</li>
-                                        <li>Electromagnetism </li>
-                                        <li>Scientific Computation and Numerical Analysis </li>
-                                        <li>Advanced Quantum Theory</li>
-                                        <li>Mathematical Medicine and Biology</li>
-                                    </ul>
-                                    <p>
-                                        Topics in my first two years involved mostly applied and computational maths along with some statistics, and even a module in German.
+                                        My third year project was a lot more Mathematical than my dissertation. It involved developing the Theory of Geometrical Diffraction from the wave equation,
+                                        and then applying it to the scattering of waves in a parabola, as well as a circle.
                                     </p>
                                 </Card.Body>
                             </Accordion.Collapse>
