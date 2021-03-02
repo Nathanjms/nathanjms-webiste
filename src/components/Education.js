@@ -14,7 +14,7 @@ function Education() {
                         <p>1st Class, University of Nottingham</p>
                     </div>
                     <p>
-                        At university, I undertook a 4-year Integrated Master's in Mathematics. My modules focussed on Applied Mathematics, such as Mathematical Biology and Computational Mathematics.
+                        At university, I undertook a 4-year Integrated Master's in Mathematics. My modules focused on Applied Mathematics, such as Mathematical Biology and Computational Mathematics.
                     </p>
                     <p>
                         Click the headers below to see more details!
