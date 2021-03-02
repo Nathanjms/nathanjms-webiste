@@ -19,7 +19,7 @@ function Education() {
                     <p>
                         Click the headers below to see more details!
                     </p>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion>
                         <div>
                             <div>
                                 <div className="edu-accord-header">
