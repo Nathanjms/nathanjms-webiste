@@ -43,7 +43,7 @@ function Music() {
                         for getting this far down the site!
                     </p>
                     <p>
-                        You'll find another one of my songs as the backing to one of my <a href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw">Youtube videos</a>,
+                        You'll find another one of my songs as the backing to one of my <a href="https://www.youtube.com/watch?v=hqVuyWsSPSs" target="_blank" rel="noopener noreferrer">YouTube videos</a>,
                          but these are the only ones in the wild, <span onClick={() => ForNow()} style={{ cursor: "pointer" }}><i> for now...</i></span>
                     </p>
                     <p hidden id="music-additional">

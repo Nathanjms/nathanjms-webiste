@@ -4,7 +4,7 @@
             {
                 "id": 1,
                 "name": "PHP",
-                "rating": "7",
+                "rating": "8",
                 "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it as well as MATLAB; my strongest programming language."
             },
             {
@@ -22,7 +22,7 @@
             {
                 "id": 4,
                 "name": "JavaScript",
-                "rating": "6.5",
+                "rating": "7",
                 "description": "A language that I'm slowly coming to terms with, with the help of React. Often I use jQuery instead of pure Javascript (or a combination of the two)."
             }
         ],
@@ -69,7 +69,7 @@
         {
             "id": 3,
             "name": "CodeIgniter",
-            "rating": "6",
+            "rating": "7.5",
             "description": "The Framework I work on in my job, I have developed an understanding of the framework and will continue to learn it in more detail I work closely with it."
         },
         {
