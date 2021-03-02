@@ -76,9 +76,9 @@ to {
 
 @media (max-width: 767px) {
   #header {
-    width: 100%;
     justify-content: space-evenly;
     flex-direction: row;
+    right: 0;
   }
 }
 
