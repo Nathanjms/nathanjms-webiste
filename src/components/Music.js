@@ -50,8 +50,8 @@ class Music extends Component {
                             for getting this far down the site!
                     </p>
                         <p>
-                            You'll find another one of my songs as the backing to one of my <a href="https://www.youtube.com/watch?v=hqVuyWsSPSs" target="_blank" rel="noopener noreferrer">YouTube videos</a>,
-                         but these are the only ones in the wild, <span onClick={this.ForNow} style={{ cursor: "pointer" }}><i> for now...</i></span>
+                            You'll find another one of my songs as the backing to one of my <a href="https://youtu.be/hqVuyWsSPSs?t=3" target="_blank" rel="noopener noreferrer">YouTube videos</a>,
+                            but these are the only ones in the wild, <span onClick={this.ForNow} style={{ cursor: "pointer" }}><i> for now...</i></span>
                         </p>
                         {this.state.forNow ? (
                             <p id="music-additional">
