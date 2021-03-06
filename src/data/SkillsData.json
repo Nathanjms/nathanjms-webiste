@@ -4,7 +4,7 @@
             {
                 "id": 1,
                 "name": "PHP",
-                "rating": "7.5",
+                "rating": "8",
                 "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it as well as MATLAB; my strongest programming language."
             },
             {
@@ -16,13 +16,13 @@
             {
                 "id": 3,
                 "name": "SQL",
-                "rating": "6",
+                "rating": "7.5",
                 "description": "Another language used often within my job. Although I usually see SQL wrapped in CodeIgniter syntax, I have become proficient in using standard SQL when querying databases."
             },
             {
                 "id": 4,
                 "name": "JavaScript",
-                "rating": "7",
+                "rating": "6.5",
                 "description": "A language that I'm slowly coming to terms with, with the help of React. Often I use jQuery instead of pure Javascript (or a combination of the two)."
             }
         ],
@@ -75,7 +75,7 @@
         {
             "id": 4,
             "name": "Laravel",
-            "rating": "3",
+            "rating": "3.5",
             "description": "A Framework I'm very interested in learning, so I have started an online course in the latest version."
         },
         {
@@ -89,6 +89,12 @@
             "name": "Hardware",
             "rating": "7",
             "description": "Having built my first computer over 6 years ago, I have always had an interest in computer hardware. I've now built over 10 computers and regularly update their components to keep them up to date!"
+        },
+        {
+            "id": 7,
+            "name": "React Native",
+            "rating": "5",
+            "description": "Building on my React knowledge whilst learning how to develop apps for iOS & Android is exciting; so am undertaking a course in React Native!"
         }
     ]
 }
