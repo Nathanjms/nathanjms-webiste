@@ -10,7 +10,7 @@
             {
                 "id": 2,
                 "name": "React",
-                "rating": "5.5",
+                "rating": "6",
                 "description": "The language the website has been built in! I've taken multiple online courses in React and am learning more all of the time!"
             },
             {
@@ -93,7 +93,7 @@
         {
             "id": 7,
             "name": "React Native",
-            "rating": "5",
+            "rating": "4.5",
             "description": "Building on my React knowledge whilst learning how to develop apps for iOS & Android is exciting; so am undertaking a course in React Native!"
         }
     ]
