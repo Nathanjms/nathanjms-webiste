@@ -80,21 +80,21 @@
         },
         {
             "id": 5,
+            "name": "React Native",
+            "rating": "4.5",
+            "description": "Building on my React knowledge whilst developing apps is an exciting concept, so I am currently undertaking a course to learn React Native in more detail!"
+        },
+        {
+            "id": 6,
             "name": "LaTeX",
             "rating": "9",
             "description": "Used to write both my project and final-year dissertation at university, I became very fluent in using LaTeX. My preferred way to access it was the online editor Overleaf"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Hardware",
             "rating": "7",
             "description": "Having built my first computer over 6 years ago, I have always had an interest in computer hardware. I've now built over 10 computers and regularly update their components to keep them up to date!"
-        },
-        {
-            "id": 7,
-            "name": "React Native",
-            "rating": "4.5",
-            "description": "Building on my React knowledge whilst developing apps is an exciting concept; so I am currently undertaking a course to learn React Native in more depth!"
         }
     ]
 }
