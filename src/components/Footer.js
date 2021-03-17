@@ -4,9 +4,9 @@ import { FaGithub, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="container">
+    <div className="container text-left">
       <div className="row">
-        <div className="col-md-6 text-left">
+        <div className="col-md-6">
           <h4 style={{ paddingBottom: "20px" }}>Contact</h4>
           <div className="contact">
             <ul className="footerList list-unstyled">
@@ -23,8 +23,8 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="col-md-6 text-right">
-          <h4 style={{ paddingBottom: "20px" }}>Links</h4>
+        <div className="col-md-6">
+          <h4 style={{ paddingBottom: "20px" }}>Other</h4>
           <div className="contact">
             <ul className="footerList list-unstyled">
               <li><Link to="/notes">Notes</Link></li>
