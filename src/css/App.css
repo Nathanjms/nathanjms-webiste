@@ -33,6 +33,14 @@
   min-height: 50vh;
 }
 
+#footer {
+  background-color: #3d4148;
+  min-height: 20vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #f9f9f9;
+}
+
 .intro-section img{
   padding-top: 30px;
   border-radius: 100%;
