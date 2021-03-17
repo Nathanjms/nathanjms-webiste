@@ -25,3 +25,16 @@
       padding: 30px;
       border-radius: 10px;
   }
+
+  .footerLogos {
+    color: #f2f3f5 !important;
+    background: #282c34;
+    padding: 6px 8px;
+    margin-right: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .footerList li {
+      margin-bottom: 5px;
+  } 

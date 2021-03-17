@@ -6,6 +6,7 @@ import About from './About';
 import Music from './Music';
 import Skills from './Skills';
 import Education from './Education';
+import Footer from './Footer';
 
 
 function App() {
@@ -36,6 +37,10 @@ function App() {
           <Music />
         </section>
       </main>
+
+      <footer id="footer">
+        <Footer />
+      </footer>
 
     </div >
   );
