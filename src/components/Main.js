@@ -9,7 +9,7 @@ function Main() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/notes">
+          <Route path="/notes">
             <Notes />
           </Route>
           <Route path="*">
