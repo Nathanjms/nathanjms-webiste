@@ -29,7 +29,7 @@ class Notes extends Component {
           <h1>Notes</h1>
           <p>Any technical notes that I'll for sure forget if I don't write them somewhere!</p>
         </div>
-          <div className="note">
+          <div className="note" style={{wordWrap: 'anywhere'}}>
             <ReactMarkdown source={markdown} />
           </div>
         </div>
