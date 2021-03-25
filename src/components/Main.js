@@ -5,10 +5,11 @@ import Notes from "./Notes";
 import Login from "./Login";
 import Signup from "./Signup";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { AuthProvider } from "../contexts/AuthContext";
 
 function Main() {
   return (
-    <div>
+    <AuthProvider>
       <HashRouter>
         <Switch>
           <Route path="/signup">
@@ -26,7 +27,7 @@ function Main() {
           </Route>
         </Switch>
       </HashRouter>
-    </div>
+    </AuthProvider>
   );
 }
 export default Main;
