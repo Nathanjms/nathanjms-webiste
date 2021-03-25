@@ -6,11 +6,12 @@ import Login from "./Login";
 import Signup from "./Signup";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
+import Dashboard from "./Dashboard";
 
 function Main() {
   return (
-    <AuthProvider>
-      <HashRouter>
+    <HashRouter>
+      <AuthProvider>
         <Switch>
           <Route path="/signup">
             <Signup />
@@ -21,13 +22,16 @@ function Main() {
           <Route path="/notes">
             <Notes />
           </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
           <Route path="*">
             <Redirect to="/" />
             <App />
           </Route>
         </Switch>
-      </HashRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </HashRouter>
   );
 }
 export default Main;
