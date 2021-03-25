@@ -6,7 +6,6 @@ import Login from "./Login";
 import Signup from "./Signup";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
-import Dashboard from "./Dashboard";
 
 function Main() {
   return (
@@ -21,9 +20,6 @@ function Main() {
           </Route>
           <Route path="/notes">
             <Notes />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
           </Route>
           <Route path="*">
             <Redirect to="/" />
