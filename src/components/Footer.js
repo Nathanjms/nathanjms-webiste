@@ -16,7 +16,10 @@ function Footer() {
                 <a className="footerLogos" href="https://github.com/Nathanjms/">
                   <FaGithub />
                 </a>
-                <a className="footerLogos" href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw">
+                <a
+                  className="footerLogos"
+                  href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"
+                >
                   <FaYoutube />
                 </a>
               </li>
@@ -27,7 +30,12 @@ function Footer() {
           <h4 style={{ paddingBottom: "20px" }}>Other</h4>
           <div className="contact">
             <ul className="footerList list-unstyled">
-              <li><Link to="/notes">Notes</Link></li>
+              <li>
+                <Link to="/notes">Notes</Link>
+              </li>
+              <li>
+                <Link to="/login">Log In</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -37,4 +45,3 @@ function Footer() {
 }
 
 export default Footer;
-
