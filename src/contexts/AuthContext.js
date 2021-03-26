@@ -11,13 +11,26 @@ export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
 
-  function signup(email, password) {
-    auth.createUserWithEmailAndPassword(email, password);
+  async function signup(email, password) {
+    try {
+      await auth.createUserWithEmailAndPassword(email, password);
+    } catch (error) {
+      throw error;
+    }
   }
 
-  function login(email, password) {
-    auth.signInWithEmailAndPassword(email, password);
+  async function login(email, password) {
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      throw error;
+    }
   }
+
+  function logout() {
+    return auth.signOut();
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -31,6 +44,7 @@ export function AuthProvider({ children }) {
     currentUser,
     signup,
     login,
+    logout,
   };
   return (
     <AuthContext.Provider value={value}>
