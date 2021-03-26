@@ -2,10 +2,11 @@
   text-align: center;
 }
 
+
 #home {
   background-color: #282c34;
   min-height: 50vh;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   color: #f9f9f9;
@@ -24,8 +25,7 @@
   padding-bottom: 50px;
 }
 
-#skills,
-#music {
+#skills, #music {
   background-color: #282c34;
 }
 
@@ -41,7 +41,7 @@
   color: #f9f9f9;
 }
 
-.intro-section img {
+.intro-section img{
   padding-top: 30px;
   border-radius: 100%;
   width: 30%;
@@ -53,12 +53,12 @@
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
 }
 
 /*--------------------------------------------------------------
@@ -90,6 +90,7 @@
   }
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -113,14 +114,13 @@
   display: inline;
 }
 
-.navBar a {
+.navBar a  {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.navBar a:hover span,
-.navBar li:hover > a span {
+.navBar a:hover span, .navBar li:hover > a span {
   display: block;
 }
 
@@ -133,21 +133,16 @@
   color: #45505b;
 }
 
-.navBar a:hover,
-.navBar .active > a,
-.navBar li:hover > a {
+.navBar a:hover, .navBar .active > a, .navBar li:hover > a {
   color: #fff;
   background: #7b26ad;
 }
 
-.navBar a:hover span,
-.navBar .active > a span,
-.navBar li:hover > a span {
+.navBar a:hover span, .navBar .active > a span, .navBar li:hover > a span {
   color: #fff;
 }
 
-.navBar a:hover,
-.navBar li:hover > a {
+.navBar a:hover, .navBar li:hover > a {
   width: 100%;
   color: #fff;
 }
@@ -193,8 +188,7 @@
     display: none;
     color: #fff;
   }
-  .navBar a:hover span,
-  .navBar li:hover > a span {
+  .navBar a:hover span, .navBar li:hover > a span {
     display: block;
   }
   .mobile-button {
@@ -218,7 +212,7 @@
   }
   .hide-nav {
     display: none !important;
-  }
+  } 
 }
 
 /*--------------------------------------------------------------
@@ -265,7 +259,8 @@
   cursor: pointer;
 }
 
-#education .card-body {
+.card-body {
   background-color: #3d4148;
   border-radius: 0 0 10px 10px;
 }
+
