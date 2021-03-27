@@ -28,7 +28,6 @@ export default function Login() {
       } else {
         setError(errorMessage);
       }
-      console.log(err);
       setLoading(false);
     }
   }

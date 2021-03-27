@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+body {
+  background-color: #282c34;
+  min-height: 50vh;
+  color: #f9f9f9;
+  text-align: center;
+}
+
 #home {
   background-color: #282c34;
   min-height: 50vh;
