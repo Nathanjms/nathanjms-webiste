@@ -1,32 +1,40 @@
-import React, { useState } from "react";
-import { Button, Alert } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useAuth } from "../contexts/AuthContext";
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
 export default function Movies() {
-  const [error, setError] = useState("");
-  const { currentUser, logout } = useAuth();
-  const history = useHistory();
+  const [movies, setMovies] = useState([]);
+  const { currentUser } = useAuth();
 
-  async function handleLogout() {
-    setError("");
+  useEffect(() => {
+    getMovies();
+  }, []);
 
-    try {
-      await logout();
-      history.push("/");
-    } catch {
-      setError("Failed to log out.");
-    }
-  }
+  const getMovies = async () => {
+    const result = await axios.get("http://localhost:8000/api/movies");
+    setMovies(result.data);
+  };
   return (
-    <div>
-      Movies
-      <div className="w-100 text-center mt-2">
-        <h2>{currentUser.email}</h2>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Button variant="link" onClick={handleLogout}>
-          Log Out
-        </Button>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-12 mt-4">
+          <Link to="/" className="homeBtn" style={{ float: "left" }}>
+            <FaHome />
+          </Link>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-lg-12">
+          <h1 className="text-center">Movies</h1>
+          <div className="w-100 text-center mt-2">
+            <h2>{currentUser.uid}</h2>
+            {movies.map((movie, index) => {
+              return <p key={movie.id}>{movie.title}</p>;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
