@@ -12,12 +12,11 @@ export default function Movies() {
 
   useEffect(() => {
     getMovies();
-    console.log("init");
   }, []);
 
   const getMovies = async () => {
     setLoading(true);
-    const result = await axios.get("http://localhost:8000/api/movies?limit=20");
+    const result = await axios.get("http://localhost:8000/api/movies?limit=24");
     setMovies(result.data);
     setLoading(false);
   };
