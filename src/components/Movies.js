@@ -15,10 +15,6 @@ export default function Movies() {
     console.log("init");
   }, []);
 
-  useEffect(() => {
-    console.log("changed");
-  }, [movies]);
-
   const getMovies = async () => {
     setLoading(true);
     console.log("getting moviues");
@@ -34,7 +30,7 @@ export default function Movies() {
       movieId: movieId,
       userId: userId,
     });
-    console.log("done");
+    getMovies();
   };
 
   return (
