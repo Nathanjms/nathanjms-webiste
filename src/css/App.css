@@ -9,6 +9,15 @@ body {
   text-align: center;
 }
 
+.btn-primary {
+  background-color: #7b26ad;
+  border: 1px solid #7b26ad;
+}
+
+.modal-content {
+  color: #3d4148;
+}
+
 #home {
   background-color: #282c34;
   min-height: 50vh;
@@ -297,5 +306,5 @@ body {
 
 #movies .btn-primary {
   background-color: #282c34;
-  border: 1px solid #282c34;
+  border: 1px solid #3d4148;
 }

@@ -1,40 +1,79 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import IMDBList from "./Movies/IMDBList";
+import MyWatchList from "./Movies/MyWatchList";
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import { Card, Button } from "react-bootstrap";
+import { Alert, Tabs, Tab, Button } from "react-bootstrap";
+import MovieFormModal from "./Movies/MovieFormModal";
 
 export default function Movies() {
-  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState("");
+  const [movies_list, setMyMovies] = useState([]);
+  const [imdb_movies, setIMDBMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [heading, setHeading] = useState("movies-list");
+  const [show, setShow] = useState(false);
+
   const { currentUser } = useAuth();
 
-  const baseURL = `https://nathan-james.herokuapp.com`;
+  const baseURL =
+    process.env.NODE_ENV === "development"
+      ? `http://localhost:8000`
+      : `https://nathan-james.herokuapp.com`;
 
   useEffect(() => {
-    getMovies();
-  }, []);
+    if (heading === "") {
+      return;
+    }
+    getMovies(heading);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [heading]);
 
-  const getMovies = async () => {
+  const getMovies = async (heading) => {
     setLoading(true);
-    const result = await axios.get(baseURL + "/api/movies?limit=24");
-    setMovies(result.data);
+    try {
+      const result = await axios.get(
+        baseURL + "/api/" + heading + "/movies?limit=24"
+      );
+      if (heading === "movies-list") {
+        setMyMovies(result.data);
+      } else {
+        setIMDBMovies(result.data);
+      }
+    } catch (err) {
+      setError(err.message);
+    }
     setLoading(false);
   };
 
-  const markAsSeen = async (movieId) => {
+  const markAsSeen = async (movieTitle, collection) => {
     try {
       await axios.post(baseURL + "/api/movies/mark-seen", {
-        movieId: movieId,
+        movieTitle: movieTitle,
         userId: currentUser.uid,
+        collection: collection,
       });
-      setMovies([]);
-      getMovies();
-    } catch (error) {
-      console.log(error.message);
+    } catch (err) {
+      setError(err.message);
+    }
+    if (collection === "movie_list") {
+      getMovies("movies-list");
+    } else {
+      getMovies("imdb");
     }
   };
+
+  const handleSelect = (key) => {
+    if (key === "movies-list") setHeading("movies-list");
+    else setHeading("imdb");
+  };
+
+  const handleClose = () => {
+    setShow(false);
+  };
+  const handleShow = () => setShow(true);
 
   return (
     <div className="container" id="movies">
@@ -44,36 +83,49 @@ export default function Movies() {
             <FaHome />
           </Link>
         </div>
-      </div>
-      <div className="row">
         <div className="col-lg-12">
           <h1 className="text-center pb-5">Movies</h1>
         </div>
-        <div className="col-lg-12 d-flex justify-content-center">
-          <div className="w-100 text-center mt-2 row justify-content-center">
-            {loading && (
-              <div className="col-lg-12 d-flex justify-content-center">
-                <h3>Loading Movies...</h3>
-              </div>
-            )}
-            {movies.map((movie, index) => {
-              return (
-                <div key={movie.id} className="col-sm-6 col-lg-4 mb-5">
-                  <Card.Body className="h-100">
-                    <p>{movie.title}</p>
-                    <Button
-                      disabled={movie.seen}
-                      onClick={() => markAsSeen(movie.id)}
-                    >
-                      Seen It!
-                    </Button>
-                  </Card.Body>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        {error && (
+          <Alert className="w-100" variant="danger">
+            {error}
+          </Alert>
+        )}
       </div>
+      <Tabs
+        defaultActiveKey="movies-list"
+        id="tabs"
+        onSelect={() => handleSelect()}
+      >
+        <Tab eventKey="movies-list" title="My Watch List">
+          <Button
+            variant="primary"
+            className="mt-3"
+            onClick={() => handleShow()}
+          >
+            Add a new Film!
+          </Button>
+
+          <MyWatchList
+            loading={loading}
+            markAsSeen={markAsSeen}
+            movies={movies_list}
+          />
+        </Tab>
+        <Tab eventKey="imdb" title="IMDB Top Movies">
+          <IMDBList
+            loading={loading}
+            markAsSeen={markAsSeen}
+            movies={imdb_movies}
+          />
+        </Tab>
+      </Tabs>
+      <MovieFormModal
+        handleClose={() => handleClose()}
+        show={show}
+        setHeading={(e) => setHeading(e)}
+        baseURL={baseURL}
+      />
     </div>
   );
 }
