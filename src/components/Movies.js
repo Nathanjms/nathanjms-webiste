@@ -11,7 +11,9 @@ import MovieFormModal from "./Movies/MovieFormModal";
 export default function Movies() {
   const [error, setError] = useState("");
   const [movies_list, setMyMovies] = useState([]);
+  const [watched_movies_list, setMyWatchedMovies] = useState([]);
   const [imdb_movies, setIMDBMovies] = useState([]);
+  const [watched_imdb_movies, setIMDBWatchedMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [heading, setHeading] = useState("movies-list");
   const [show, setShow] = useState(false);
@@ -33,14 +35,21 @@ export default function Movies() {
 
   const getMovies = async (heading) => {
     setLoading(true);
+    var watched = false;
+    if (heading !== "movies-list" && heading !== "imdb") {
+      watched = true;
+    }
+    heading = heading.replace("watched-", "");
     try {
       const result = await axios.get(
-        baseURL + "/api/" + heading + "/movies?limit=24"
+        baseURL + "/api/" + heading + "/movies?limit=24&watched=" + watched
       );
       if (heading === "movies-list") {
-        setMyMovies(result.data);
+        watched ? setMyWatchedMovies(result.data) : setMyMovies(result.data);
       } else {
-        setIMDBMovies(result.data);
+        watched
+          ? setIMDBWatchedMovies(result.data)
+          : setIMDBMovies(result.data);
       }
     } catch (err) {
       setError(err.message);
@@ -66,8 +75,7 @@ export default function Movies() {
   };
 
   const handleSelect = (key) => {
-    if (key === "movies-list") setHeading("movies-list");
-    else setHeading("imdb");
+    setHeading(key);
   };
 
   const handleClose = () => {
@@ -114,7 +122,7 @@ export default function Movies() {
       <Tabs
         defaultActiveKey="movies-list"
         id="tabs"
-        onSelect={() => handleSelect()}
+        onSelect={(e) => handleSelect(e)}
       >
         <Tab eventKey="movies-list" title="My Watch List">
           <Button
@@ -131,11 +139,25 @@ export default function Movies() {
             movies={movies_list}
           />
         </Tab>
+        <Tab eventKey="watched-movies-list" title="My Watched Movies">
+          <MyWatchList
+            loading={loading}
+            markAsSeen={markAsSeen}
+            movies={watched_movies_list}
+          />
+        </Tab>
         <Tab eventKey="imdb" title="IMDB Top Movies">
           <IMDBList
             loading={loading}
             markAsSeen={markAsSeen}
             movies={imdb_movies}
+          />
+        </Tab>
+        <Tab eventKey="watched-imdb" title="IMDB Watched Movies">
+          <IMDBList
+            loading={loading}
+            markAsSeen={markAsSeen}
+            movies={watched_imdb_movies}
           />
         </Tab>
       </Tabs>
