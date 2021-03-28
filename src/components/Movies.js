@@ -10,23 +10,26 @@ export default function Movies() {
   const [loading, setLoading] = useState(false);
   const { currentUser } = useAuth();
 
+  const baseURL = `https://nathan-james.herokuapp.com`;
+
   useEffect(() => {
     getMovies();
   }, []);
 
   const getMovies = async () => {
     setLoading(true);
-    const result = await axios.get("http://localhost:8000/api/movies?limit=24");
+    const result = await axios.get(baseURL + "/api/movies?limit=24");
     setMovies(result.data);
     setLoading(false);
   };
 
   const markAsSeen = async (movieId) => {
     try {
-      await axios.post("http://localhost:8000/api/movies/mark-seen", {
+      await axios.post(baseURL + "/api/movies/mark-seen", {
         movieId: movieId,
         userId: currentUser.uid,
       });
+      setMovies([]);
       getMovies();
     } catch (error) {
       console.log(error.message);
