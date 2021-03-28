@@ -36,9 +36,6 @@ function Footer() {
               <li>
                 <Link to="/movies">Movies</Link>
               </li>
-              <li>
-                <Link to="/login">Log In</Link>
-              </li>
             </ul>
           </div>
         </div>
