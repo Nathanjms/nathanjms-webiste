@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+body {
+  background-color: #282c34;
+  min-height: 50vh;
+  color: #f9f9f9;
+  text-align: center;
+}
+
 #home {
   background-color: #282c34;
   min-height: 50vh;
@@ -222,6 +229,14 @@
 }
 
 /*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+
+#login .card-body {
+  color: #282c34;
+}
+
+/*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 
@@ -268,4 +283,19 @@
 #education .card-body {
   background-color: #3d4148;
   border-radius: 0 0 10px 10px;
+}
+
+/*--------------------------------------------------------------
+# Movies
+--------------------------------------------------------------*/
+
+#movies .card-body {
+  background-color: #3d4148;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+#movies .btn-primary {
+  background-color: #282c34;
+  border: 1px solid #282c34;
 }
