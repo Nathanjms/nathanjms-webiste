@@ -3,7 +3,7 @@ import axios from "axios";
 import IMDBList from "./Movies/IMDBList";
 import MyWatchList from "./Movies/MyWatchList";
 import { useAuth } from "../contexts/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { Alert, Tabs, Tab, Button } from "react-bootstrap";
 import MovieFormModal from "./Movies/MovieFormModal";
@@ -15,8 +15,8 @@ export default function Movies() {
   const [loading, setLoading] = useState(false);
   const [heading, setHeading] = useState("movies-list");
   const [show, setShow] = useState(false);
-
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
+  const history = useHistory();
 
   const baseURL =
     process.env.NODE_ENV === "development"
@@ -75,6 +75,17 @@ export default function Movies() {
   };
   const handleShow = () => setShow(true);
 
+  async function handleLogout() {
+    setError("");
+
+    try {
+      await logout();
+      history.push("/");
+    } catch {
+      setError("Failed to log out.");
+    }
+  }
+
   return (
     <div className="container" id="movies">
       <div className="row">
@@ -82,6 +93,14 @@ export default function Movies() {
           <Link to="/" className="homeBtn" style={{ float: "left" }}>
             <FaHome />
           </Link>
+          <Button
+            variant="link"
+            className="homeBtn"
+            style={{ float: "right" }}
+            onClick={handleLogout}
+          >
+            Log Out
+          </Button>
         </div>
         <div className="col-lg-12">
           <h1 className="text-center pb-5">Movies</h1>
