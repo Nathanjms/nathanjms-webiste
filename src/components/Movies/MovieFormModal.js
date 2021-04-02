@@ -1,16 +1,17 @@
 import React, { useRef, useState } from "react";
-import { Button, Modal, Form, Alert } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import axios from "axios";
 
 export default function MovieFormModal({
   handleClose,
   show,
-  setHeading,
   baseURL,
+  userId,
+  setError,
+  setSuccess,
 }) {
   const titleRef = useRef();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -23,19 +24,20 @@ export default function MovieFormModal({
     try {
       setError("");
       setLoading(true);
-      await axios.post(baseURL + "/api/movies/add-movie", {
+      await axios.post(baseURL + "/api/movies/add", {
         title: titleRef.current.value,
-        seen: false,
+        firebaseId: userId,
       });
+      handleClose();
+      setLoading(false);
+      setSuccess("");
+      setSuccess("Movie Added Successfully");
     } catch (err) {
-      // Handle Errors here.
       var errorMessage = err.message;
+      handleClose();
+      setLoading(false);
       setError(errorMessage);
     }
-    setLoading(false);
-    handleClose();
-    setHeading("");
-    setHeading("movies-list");
   }
 
   return (
@@ -46,11 +48,6 @@ export default function MovieFormModal({
             <Modal.Title>Add new movie to watch list</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {error && (
-              <Alert className="w-100" variant="danger">
-                {error}
-              </Alert>
-            )}
             <Form.Group id="title">
               <Form.Label>What's the Movie Title?</Form.Label>
               <Form.Control type="text" ref={titleRef} required />
