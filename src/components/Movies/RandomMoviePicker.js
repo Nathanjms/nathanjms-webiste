@@ -21,6 +21,7 @@ export default function RandomMoviePicker({ movies }) {
     new Promise((resolve) => setTimeout(resolve, delay, ...args));
 
   const chooseMovie = async (movies) => {
+    setChosen(false);
     var i = 20;
     while (i > 0) {
       var movie = random(movies);
@@ -28,8 +29,37 @@ export default function RandomMoviePicker({ movies }) {
       await wait(20 * i);
       i--;
     }
-    console.log(i);
     setChosen(movie.title);
+  };
+
+  const movieCardContent = (movies, randomMovie, chosen) => {
+    if (movies.length === 0) {
+      return (
+        <div className="col-lg-12">
+          <h3>There are no movies to choose from!</h3>
+        </div>
+      );
+    }
+    return (
+      <div className="pb-10">
+        <div className="col-lg-12">
+          <h4>What Will I Choose?</h4>
+        </div>
+        <Button onClick={() => chooseMovie(movies)}>Find a Movie!</Button>
+        {randomMovie.length > 0 && !chosen && (
+          <div className="col-lg-12 mt-5">
+            <h3 className="pb-5">Choosing...</h3>
+            <h4>{randomMovie}</h4>
+          </div>
+        )}
+        {chosen && (
+          <div className="col-lg-12 mt-5">
+            <h3 className="pb-5">I have selected:</h3>
+            <h4>{randomMovie}</h4>
+          </div>
+        )}
+      </div>
+    );
   };
 
   return (
@@ -38,26 +68,9 @@ export default function RandomMoviePicker({ movies }) {
         <h3 className="text-center pb-5">Random Movie Picker</h3>
       </div>
       <div className="col-lg-12 d-flex justify-content-center">
-        <div className="w-100 text-center mt-2 row justify-content-center">
-          {movies.length === 0 && (
-            <div className="col-lg-12">
-              <h3>There are no movies to choose from!</h3>
-            </div>
-          )}
-          <Card.Body className="h-100">
-            <Button onClick={() => chooseMovie(movies)}>Find a Movie!</Button>
-            {randomMovie.length > 0 && !chosen && (
-              <div className="col-lg-12 mt-5">
-                <h3>Choosing...</h3>
-                <h4>{randomMovie}</h4>
-              </div>
-            )}
-            {chosen && (
-              <div className="col-lg-12 mt-5">
-                <h3>I have selected:</h3>
-                <h4>{randomMovie}</h4>
-              </div>
-            )}
+        <div className="w-50 text-center mt-2 row justify-content-center">
+          <Card.Body className="random-movie-card">
+            {movieCardContent(movies, randomMovie, chosen)}
           </Card.Body>
         </div>
       </div>

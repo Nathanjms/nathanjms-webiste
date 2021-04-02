@@ -308,3 +308,7 @@ body {
   background-color: #282c34;
   border: 1px solid #3d4148;
 }
+
+.random-movie-card {
+  padding: 25px;
+}
