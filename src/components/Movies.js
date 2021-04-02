@@ -22,7 +22,7 @@ export default function Movies() {
   const baseURL =
     process.env.NODE_ENV === "development"
       ? `http://localhost:3002`
-      : `https://nathan-james.herokuapp.com`;
+      : `https://nathanjms-api.herokuapp.com`;
 
   const getUserInfo = async (uid) => {
     setLoading(true);

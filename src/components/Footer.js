@@ -27,7 +27,7 @@ function Footer() {
           </div>
         </div>
         <div className="col-md-6">
-          <h4 style={{ paddingBottom: "20px" }}>Other</h4>
+          <h4 style={{ paddingBottom: "20px" }}>Extras</h4>
           <div className="contact">
             <ul className="footerList list-unstyled">
               <li>
@@ -36,6 +36,7 @@ function Footer() {
               <li>
                 <Link to="/movies">Movies</Link>
               </li>
+              <li>Last updated: 2nd April 2021</li>
             </ul>
           </div>
         </div>
