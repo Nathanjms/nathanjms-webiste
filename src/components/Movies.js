@@ -112,9 +112,9 @@ export default function Movies() {
         <div className="col-lg-12">
           <h1 className="text-center">Movies</h1>
         </div>
-        <div className="col-lg-12">
-          <h4 className="text-center pt-5">Name: {userInfo.user_name}</h4>
-          <h4 className="text-center">Group: {userInfo.group_name}</h4>
+        <div className="col-lg-12 pb-4">
+          <h5 className="text-center pt-5">Name: {userInfo.user_name}</h5>
+          <h5 className="text-center">Group: {userInfo.group_name}</h5>
         </div>
         {error && (
           <Alert className="w-100" variant="danger">
