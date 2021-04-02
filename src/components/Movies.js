@@ -12,45 +12,50 @@ export default function Movies() {
   const [error, setError] = useState("");
   const [movies_list, setMyMovies] = useState([]);
   const [watched_movies_list, setMyWatchedMovies] = useState([]);
-  const [imdb_movies, setIMDBMovies] = useState([]);
-  const [watched_imdb_movies, setIMDBWatchedMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [heading, setHeading] = useState("movies-list");
   const [show, setShow] = useState(false);
+  const [userInfo, setUserInfo] = useState(false);
   const { currentUser, logout } = useAuth();
   const history = useHistory();
 
   const baseURL =
     process.env.NODE_ENV === "development"
-      ? `http://localhost:8000`
+      ? `http://localhost:3002`
       : `https://nathan-james.herokuapp.com`;
 
-  useEffect(() => {
-    if (heading === "") {
-      return;
-    }
-    getMovies(heading);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [heading]);
-
-  const getMovies = async (heading) => {
+  const getUserInfo = async (uid) => {
     setLoading(true);
-    var watched = false;
-    if (heading !== "movies-list" && heading !== "imdb") {
-      watched = true;
+    try {
+      const result = await axios.post(baseURL + "/api/user-info", {
+        firebaseId: uid,
+      });
+      setUserInfo(result.data);
+    } catch (err) {
+      setError(err);
     }
-    heading = heading.replace("watched-", "");
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getUserInfo(currentUser.uid);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (userInfo) {
+      getMovies(userInfo.group_id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userInfo]);
+
+  const getMovies = async (userGroupId) => {
+    setLoading(true);
     try {
       const result = await axios.get(
-        baseURL + "/api/" + heading + "/movies?limit=24&watched=" + watched
+        baseURL + "/api/" + userGroupId + "/movies"
       );
-      if (heading === "movies-list") {
-        watched ? setMyWatchedMovies(result.data) : setMyMovies(result.data);
-      } else {
-        watched
-          ? setIMDBWatchedMovies(result.data)
-          : setIMDBMovies(result.data);
-      }
+      setMyMovies(result.data);
     } catch (err) {
       setError(err.message);
     }
@@ -113,6 +118,9 @@ export default function Movies() {
         <div className="col-lg-12">
           <h1 className="text-center pb-5">Movies</h1>
         </div>
+        <div className="col-lg-12">
+          <h3 className="text-center pb-5">{userInfo.user_name}</h3>
+        </div>
         {error && (
           <Alert className="w-100" variant="danger">
             {error}
@@ -146,20 +154,8 @@ export default function Movies() {
             movies={watched_movies_list}
           />
         </Tab>
-        <Tab eventKey="imdb" title="IMDB Top Movies">
-          <IMDBList
-            loading={loading}
-            markAsSeen={markAsSeen}
-            movies={imdb_movies}
-          />
-        </Tab>
-        <Tab eventKey="watched-imdb" title="IMDB Watched Movies">
-          <IMDBList
-            loading={loading}
-            markAsSeen={markAsSeen}
-            movies={watched_imdb_movies}
-          />
-        </Tab>
+        <Tab eventKey="imdb" title="IMDB Top Movies"></Tab>
+        <Tab eventKey="watched-imdb" title="IMDB Watched Movies"></Tab>
       </Tabs>
       <MovieFormModal
         handleClose={() => handleClose()}
