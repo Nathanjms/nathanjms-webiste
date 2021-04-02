@@ -1,8 +1,23 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-export default function MyWatchList({ loading, movies, markAsSeen }) {
-  console.log("test");
+export default function MyWatchList({ loading, movies, markAsSeen, seen }) {
+  var watched = [];
+  var unwatched = [];
+
+  movies.forEach((movie, index) => {
+    if (movie.seen) {
+      watched.push(movie);
+    } else {
+      unwatched.push(movie);
+    }
+  });
+
+  if (seen) {
+    movies = watched;
+  } else {
+    movies = unwatched;
+  }
   return (
     <div className="row">
       <div className="col-lg-12 pt-3">
@@ -25,12 +40,14 @@ export default function MyWatchList({ loading, movies, markAsSeen }) {
               <div key={movie.id} className="col-sm-6 col-lg-4 mb-5">
                 <Card.Body className="h-100">
                   <p>{movie.title}</p>
-                  <Button
-                    disabled={movie.seen}
-                    onClick={() => markAsSeen(movie.title, "movie_list")}
-                  >
-                    Seen It!
-                  </Button>
+                  {!seen && (
+                    <Button
+                      disabled={movie.seen}
+                      onClick={() => markAsSeen(movie.id)}
+                    >
+                      Seen It!
+                    </Button>
+                  )}
                 </Card.Body>
               </div>
             );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import IMDBList from "./Movies/IMDBList";
 import MyWatchList from "./Movies/MyWatchList";
+import RandomMoviePicker from "./Movies/RandomMoviePicker";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
@@ -10,12 +10,12 @@ import MovieFormModal from "./Movies/MovieFormModal";
 
 export default function Movies() {
   const [error, setError] = useState("");
-  const [movies_list, setMyMovies] = useState([]);
-  const [watched_movies_list, setMyWatchedMovies] = useState([]);
+  const [success, setSuccess] = useState("");
+  const [moviesList, setMyMovies] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [heading, setHeading] = useState("movies-list");
   const [show, setShow] = useState(false);
   const [userInfo, setUserInfo] = useState(false);
+
   const { currentUser, logout } = useAuth();
   const history = useHistory();
 
@@ -32,7 +32,7 @@ export default function Movies() {
       });
       setUserInfo(result.data);
     } catch (err) {
-      setError(err);
+      setError(err.message);
     }
     setLoading(false);
   };
@@ -49,6 +49,13 @@ export default function Movies() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userInfo]);
 
+  useEffect(() => {
+    if (userInfo && success.length > 0) {
+      getMovies(userInfo.group_id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [success]);
+
   const getMovies = async (userGroupId) => {
     setLoading(true);
     try {
@@ -62,31 +69,18 @@ export default function Movies() {
     setLoading(false);
   };
 
-  const markAsSeen = async (movieTitle, collection) => {
+  const markAsSeen = async (movieId) => {
     try {
-      await axios.post(baseURL + "/api/movies/mark-seen", {
-        movieTitle: movieTitle,
+      await axios.post(baseURL + "/api/movies/seen", {
+        movieId: movieId,
         userId: currentUser.uid,
-        collection: collection,
       });
+      setSuccess("");
+      setSuccess("Movie marked as seen!");
     } catch (err) {
       setError(err.message);
     }
-    if (collection === "movie_list") {
-      getMovies("movies-list");
-    } else {
-      getMovies("imdb");
-    }
   };
-
-  const handleSelect = (key) => {
-    setHeading(key);
-  };
-
-  const handleClose = () => {
-    setShow(false);
-  };
-  const handleShow = () => setShow(true);
 
   async function handleLogout() {
     setError("");
@@ -116,27 +110,29 @@ export default function Movies() {
           </Button>
         </div>
         <div className="col-lg-12">
-          <h1 className="text-center pb-5">Movies</h1>
+          <h1 className="text-center">Movies</h1>
         </div>
         <div className="col-lg-12">
-          <h3 className="text-center pb-5">{userInfo.user_name}</h3>
+          <h4 className="text-center pt-5">Name: {userInfo.user_name}</h4>
+          <h4 className="text-center">Group: {userInfo.group_name}</h4>
         </div>
         {error && (
           <Alert className="w-100" variant="danger">
             {error}
           </Alert>
         )}
+        {success && (
+          <Alert className="w-100" variant="success">
+            {success}
+          </Alert>
+        )}
       </div>
-      <Tabs
-        defaultActiveKey="movies-list"
-        id="tabs"
-        onSelect={(e) => handleSelect(e)}
-      >
+      <Tabs defaultActiveKey="movies-list" id="tabs">
         <Tab eventKey="movies-list" title="My Watch List">
           <Button
             variant="primary"
             className="mt-3"
-            onClick={() => handleShow()}
+            onClick={() => setShow(true)}
           >
             Add a new Film!
           </Button>
@@ -144,24 +140,31 @@ export default function Movies() {
           <MyWatchList
             loading={loading}
             markAsSeen={markAsSeen}
-            movies={movies_list}
+            movies={moviesList}
+            seen={false}
           />
         </Tab>
         <Tab eventKey="watched-movies-list" title="My Watched Movies">
           <MyWatchList
             loading={loading}
             markAsSeen={markAsSeen}
-            movies={watched_movies_list}
+            movies={moviesList}
+            seen={true}
           />
         </Tab>
-        <Tab eventKey="imdb" title="IMDB Top Movies"></Tab>
-        <Tab eventKey="watched-imdb" title="IMDB Watched Movies"></Tab>
+        <Tab eventKey="random-movie-picker" title="Random Movie Picker">
+          <RandomMoviePicker movies={moviesList} />
+        </Tab>
+        {/* <Tab eventKey="imdb" title="IMDB Top Movies"></Tab>
+        <Tab eventKey="watched-imdb" title="IMDB Watched Movies"></Tab> */}
       </Tabs>
       <MovieFormModal
-        handleClose={() => handleClose()}
+        handleClose={() => setShow(false)}
         show={show}
-        setHeading={(e) => setHeading(e)}
         baseURL={baseURL}
+        userId={currentUser.uid}
+        setError={setError}
+        setSuccess={setSuccess}
       />
     </div>
   );
