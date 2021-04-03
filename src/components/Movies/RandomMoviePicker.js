@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap";
 
 export default function RandomMoviePicker({ movies }) {
   const [chosen, setChosen] = useState(false);
+  const [choosing, setChoosing] = useState(false);
   const [randomMovie, setRandomMovie] = useState("");
   var unwatched = [];
 
@@ -21,6 +22,7 @@ export default function RandomMoviePicker({ movies }) {
     new Promise((resolve) => setTimeout(resolve, delay, ...args));
 
   const chooseMovie = async (movies) => {
+    setChoosing(true);
     setChosen(false);
     var i = 20;
     while (i > 0) {
@@ -30,6 +32,7 @@ export default function RandomMoviePicker({ movies }) {
       i--;
     }
     setChosen(movie.title);
+    setChoosing(false);
   };
 
   const movieCardContent = (movies, randomMovie, chosen) => {
@@ -45,7 +48,9 @@ export default function RandomMoviePicker({ movies }) {
         <div className="col-lg-12">
           <h4>What Will I Choose?</h4>
         </div>
-        <Button onClick={() => chooseMovie(movies)}>Find a Movie!</Button>
+        <Button disabled={choosing} onClick={() => chooseMovie(movies)}>
+          Find a Movie!
+        </Button>
         {randomMovie.length > 0 && !chosen && (
           <div className="col-lg-12 mt-5">
             <h3 className="pb-5">Choosing...</h3>
