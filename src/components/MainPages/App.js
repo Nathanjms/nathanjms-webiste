@@ -1,20 +1,15 @@
-import React from 'react';
-import '../css/App.css';
-import Navbar from './Navbar';
-import Home from './Home';
-import About from './About';
-import Music from './Music';
-import Skills from './Skills';
-import Education from './Education';
-import Footer from './Footer';
-
+import React from "react";
+import Navbar from "../Global/Navbar";
+import Home from "./Home";
+import About from "./About";
+import Music from "./Music";
+import Skills from "./Skills";
+import Education from "./Education";
+import Footer from "../Global/Footer";
 
 function App() {
-
   return (
-
     <div className="App">
-
       <header id="header" className="d-flex">
         <Navbar />
       </header>
@@ -41,8 +36,7 @@ function App() {
       <footer id="footer">
         <Footer />
       </footer>
-
-    </div >
+    </div>
   );
 }
 export default App;

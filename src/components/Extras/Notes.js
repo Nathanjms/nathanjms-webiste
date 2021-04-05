@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import FnKeys from "../data/fnkeys.md";
+import FnKeys from "../../data/fnkeys.md";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import "../css/Notes.css";
+import "../../css/Notes.css";
+import Footer from "../Global/Footer";
 
 class Notes extends Component {
   constructor() {
@@ -38,13 +39,16 @@ class Notes extends Component {
                     write them somewhere!
                   </p>
                 </div>
-                <div className="note" style={{ wordWrap: "anywhere" }}>
+                <div className="note">
                   <ReactMarkdown source={markdown} />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <footer id="footer">
+          <Footer />
+        </footer>
       </>
     );
   }
