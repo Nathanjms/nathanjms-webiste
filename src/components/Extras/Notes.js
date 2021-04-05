@@ -42,7 +42,8 @@ class Notes extends Component {
                 <div className="headerContainer text-center">
                   <h1>Notes</h1>
                   <p>
-                    Any technical notes that I'll forget if I don't write them
+                    This page is mostly for my benefit, it contains any
+                    technical notes that I'll forget if I don't write them
                     somewhere!
                   </p>
                 </div>
