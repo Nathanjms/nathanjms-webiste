@@ -4,14 +4,14 @@ import App from "./MainPages/App";
 import Notes from "./Extras/Notes";
 import Login from "./User/Login";
 // import Signup from "./Signup";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
 import PrivateRoute from "./Global/PrivateRoute";
 import Movies from "./Movies/Movies";
 
 function Main() {
   return (
-    <Router>
+    <HashRouter>
       <AuthProvider>
         <Switch>
           <PrivateRoute exact path="/movies" component={Movies} />
@@ -21,7 +21,7 @@ function Main() {
           <Route path="*" component={App} redirectTo="/" />
         </Switch>
       </AuthProvider>
-    </Router>
+    </HashRouter>
   );
 }
 export default Main;
