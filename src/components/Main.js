@@ -4,7 +4,7 @@ import App from "./MainPages/App";
 import Notes from "./Extras/Notes";
 import Login from "./User/Login";
 // import Signup from "./Signup";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
 import PrivateRoute from "./Global/PrivateRoute";
 import Movies from "./Movies/Movies";
