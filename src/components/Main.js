@@ -1,13 +1,13 @@
 import React from "react";
 import "../css/App.css";
-import App from "./App";
-import Notes from "./Notes";
-import Login from "./Login";
+import App from "./MainPages/App";
+import Notes from "./Extras/Notes";
+import Login from "./User/Login";
 // import Signup from "./Signup";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext";
-import PrivateRoute from "./PrivateRoute";
-import Movies from "./Movies";
+import PrivateRoute from "./Global/PrivateRoute";
+import Movies from "./Movies/Movies";
 
 function Main() {
   return (

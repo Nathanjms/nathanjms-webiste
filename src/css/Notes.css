@@ -1,8 +1,9 @@
 #notes {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 80vh;
   padding-bottom: 30px;
   color: #f9f9f9;
+  text-align: left;
 }
 
 .headerContainer {
@@ -23,17 +24,6 @@
   background-color: #3d4148;
   padding: 30px;
   border-radius: 10px;
-}
-
-.footerLogos {
-  color: #f2f3f5 !important;
-  background: #282c34;
-  padding: 6px 8px;
-  margin-right: 8px;
-  font-size: 12px;
-  border-radius: 5px;
-}
-
-.footerList li {
-  margin-bottom: 5px;
+  word-wrap: break-word;
+  margin-bottom: 50px;
 }
