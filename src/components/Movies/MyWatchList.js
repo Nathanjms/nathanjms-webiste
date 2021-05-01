@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import ReactLoading from "react-loading";
 
 export default function MyWatchList({ loading, movies, markAsSeen, seen }) {
   var watched = [];
@@ -26,8 +27,13 @@ export default function MyWatchList({ loading, movies, markAsSeen, seen }) {
       <div className="col-lg-12 d-flex justify-content-center">
         <div className="w-100 text-center mt-2 row justify-content-center">
           {loading && (
-            <div className="col-lg-12 d-flex justify-content-center">
-              <h3>Loading Movies...</h3>
+            <div className="col-lg-12 d-flex row justify-content-center">
+              <div className="col-lg-12">
+                <h3>Loading Movies...</h3>
+              </div>
+              <div>
+                <ReactLoading height={30} width={30} type={"spin"} />
+              </div>
             </div>
           )}
           {movies.length === 0 && !loading && (
