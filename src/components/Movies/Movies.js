@@ -119,7 +119,7 @@ export default function Movies() {
               Name: {loading ? "Loading..." : `${userInfo.user_name}`}
             </h5>
             <h5 className="text-center">
-              Name: {loading ? "Loading..." : `${userInfo.user_name}`}
+              Group: {loading ? "Loading..." : `${userInfo.group_name}`}
             </h5>
           </div>
           {error && (
