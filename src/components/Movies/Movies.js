@@ -6,6 +6,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { Alert, Tabs, Tab, Button } from "react-bootstrap";
+import { findIndex } from "lodash";
 import MovieFormModal from "./MovieFormModal";
 import Footer from "../Global/Footer";
 
@@ -76,8 +77,11 @@ export default function Movies() {
         movieId: movieId,
         userId: currentUser.uid,
       });
+      let movieIndex = findIndex(moviesList, {
+        id: movieId,
+      });
       setSuccess("");
-      setSuccess("Movie marked as seen!");
+      setSuccess(`Movie "${moviesList[movieIndex]["title"]}" marked as seen!`);
     } catch (err) {
       setError(err.message);
     }
