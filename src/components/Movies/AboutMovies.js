@@ -8,7 +8,7 @@ export default function AboutMovies() {
         <h3 className="text-center pb-5">About</h3>
       </div>
       <div className="col-lg-12 d-flex justify-content-center">
-        <div className="w-100 px-5 text-left mt-2 row">
+        <div className="w-100 text-left mt-2 row" id="moviesAboutDiv">
           <Card.Body className="random-movie-card pt-4">
             <div>
               <p>

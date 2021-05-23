@@ -337,3 +337,7 @@ body {
 .nav-tabs {
   margin-bottom: 20px;
 }
+
+#moviesAboutDiv {
+  max-width: 90%;
+}
