@@ -333,3 +333,7 @@ body {
 .random-movie-card {
   padding: 25px;
 }
+
+.nav-tabs {
+  margin-bottom: 20px;
+}

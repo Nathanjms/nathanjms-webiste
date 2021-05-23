@@ -8,6 +8,7 @@ import { FaHome } from "react-icons/fa";
 import { Alert, Tabs, Tab, Button } from "react-bootstrap";
 import { findIndex } from "lodash";
 import MovieFormModal from "./MovieFormModal";
+import AboutMovies from "./AboutMovies"
 import Footer from "../Global/Footer";
 
 export default function Movies() {
@@ -164,6 +165,9 @@ export default function Movies() {
           </Tab>
           <Tab eventKey="random-movie-picker" title="Random Movie Picker">
             <RandomMoviePicker movies={moviesList} />
+          </Tab>
+          <Tab eventKey="about" title="About">
+            <AboutMovies />
           </Tab>
           {/* <Tab eventKey="imdb" title="IMDB Top Movies"></Tab>
         <Tab eventKey="watched-imdb" title="IMDB Watched Movies"></Tab> */}
