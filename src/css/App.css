@@ -341,3 +341,8 @@ body {
 #moviesAboutDiv {
   max-width: 90%;
 }
+
+#randomMovieDiv {
+  max-width: 80%;
+  width: 500px;
+}

@@ -44,7 +44,8 @@ export default function AboutMovies() {
                 feel free to drop me an email on{" "}
                 <a href="mailto:nathan@nathanjms.co.uk">
                   nathan@nathanjms.co.uk
-                </a> and I will create a user account and group for you!
+                </a>{" "}
+                and I will create a user account and group for you!
               </p>
             </div>
           </Card.Body>
@@ -69,6 +70,16 @@ export default function AboutMovies() {
                 <li>
                   Including the user's system from Firebase, so the users and
                   the movies are stored in the same place.
+                </li>
+              </ul>
+              <li>Random Movie Picker - styling improvements</li>
+              <ul>
+                <li>
+                  General styling - maybe use two cards instead of one.
+                </li>
+                <li>
+                  Pick Movie button to be more dynamic, maybe disappear when
+                  choosing, then say 'Choose again?' afterwards.
                 </li>
               </ul>
             </ul>

@@ -49,7 +49,7 @@ export default function RandomMoviePicker({ movies }) {
     }
     return (
       <div className="pb-10">
-        <div className="col-lg-12">
+        <div className="col-lg-12 pb-2">
           <h4>What Will I Choose?</h4>
         </div>
         <Button disabled={choosing} onClick={() => chooseMovie(movies)}>
@@ -77,7 +77,7 @@ export default function RandomMoviePicker({ movies }) {
         <h3 className="text-center pb-5">Random Movie Picker</h3>
       </div>
       <div className="col-lg-12 d-flex justify-content-center">
-        <div className="w-50 text-center mt-2 row justify-content-center">
+        <div className="text-center mt-2 row justify-content-center" id="randomMovieDiv">
           <Card.Body className="random-movie-card">
             {movieCardContent(movies, randomMovie, chosen)}
           </Card.Body>
