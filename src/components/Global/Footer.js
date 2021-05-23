@@ -36,7 +36,7 @@ function Footer() {
               <li>
                 <Link to="/movies">Movies</Link>
               </li>
-              <li>Last updated: 1st May 2021</li>
+              <li>Last updated: 23rd May 2021</li>
             </ul>
           </div>
         </div>

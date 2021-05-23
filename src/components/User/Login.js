@@ -61,6 +61,10 @@ export default function Login() {
           Don't have an account? <Link to="/">Click here</Link> to go back to
           the main site.
         </div>
+        <div className="w-100 text-center mt-2">
+          Alternatively, <Link to="/movies/demo">click here</Link> to see a demo of the Movies
+          Section.
+        </div>
       </div>
     </Container>
   );

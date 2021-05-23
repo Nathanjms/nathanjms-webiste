@@ -25,6 +25,10 @@ export default function RandomMoviePicker({ movies }) {
     setChoosing(true);
     setChosen(false);
     var i = 20;
+    if (movies.length === 1) { // If only one, chose it instantly! 
+      // TODO: Add message when this is the case.
+      i = 1;
+    }
     while (i > 0) {
       var movie = random(movies);
       setRandomMovie(movie.title);
