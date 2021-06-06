@@ -35,7 +35,8 @@ export default function Movies() {
       });
       setUserInfo(result.data);
     } catch (err) {
-      setError(err.message);
+      setUserInfo({group_id: 0, group_name: "Unknown", user_name: "Unknown"});
+      setError(err.response.data);
     }
     setLoading(false);
   };
