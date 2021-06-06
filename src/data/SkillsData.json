@@ -4,8 +4,8 @@
             {
                 "id": 1,
                 "name": "PHP",
-                "rating": "8",
-                "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it as well as MATLAB; my strongest programming language."
+                "rating": "8.5",
+                "description": "The main language I use within my job! I have gone from knowing nothing about PHP, to understanding it more than MATLAB; my strongest programming language for the past few years."
             },
             {
                 "id": 2,
@@ -22,8 +22,8 @@
             {
                 "id": 4,
                 "name": "JavaScript",
-                "rating": "6.5",
-                "description": "A language that I'm slowly coming to terms with, with the help of React. Often I use jQuery instead of pure Javascript (or a combination of the two)."
+                "rating": "7.5",
+                "description": "A language that I both love and hate compared to PHP! I often use jQuery instead of pure Javascript (or a combination of the two)."
             }
         ],
         "other": [
@@ -36,7 +36,7 @@
             {
                 "id": 2,
                 "name": "C++",
-                "rating": "6",
+                "rating": "5.5",
                 "description": "A language I studied during university, C++ introduced me to object based programming."
             },
             {
@@ -58,37 +58,37 @@
             "id": 1,
             "name": "GitHub",
             "rating": "8.5",
-            "description": "Used briefly during my dissertation, I now use GitHub on a daily basis during my role as a Junior Software Developer."
+            "description": "Used briefly during my dissertation, I now use GitHub on a daily basis during my role as a Software Developer."
         },
         {
             "id": 2,
             "name": "jQuery",
-            "rating": "6.5",
-            "description": "Arguable the syntax I had the most trouble understanding initially, I now am confident in using jQuery and much prefer it to regular JavaScript."
+            "rating": "7.5",
+            "description": "Arguable the syntax I had the most trouble understanding initially, I now am confident in using jQuery and prefer it to regular JavaScript."
         },
         {
             "id": 3,
             "name": "CodeIgniter",
-            "rating": "7.5",
-            "description": "The Framework I work on in my job, I have developed an understanding of the framework and will continue to learn it in more detail I work closely with it."
+            "rating": "8",
+            "description": "The main Framework I work on in my job, I have developed an understanding of the framework and will continue to learn it in more detail I work closely with it."
         },
         {
             "id": 4,
             "name": "Laravel",
-            "rating": "3.5",
-            "description": "A Framework I'm very interested in learning, so I have started an online course in the latest version."
+            "rating": "5",
+            "description": "A Framework I'm very interested in learning, I have completed a course in the latest version, and have recently been able to use it for some projects at work."
         },
         {
             "id": 5,
             "name": "React Native",
             "rating": "4.5",
-            "description": "Building on my React knowledge whilst developing apps is an exciting concept, so I am currently undertaking a course to learn React Native in more detail!"
+            "description": "Building on my React knowledge whilst developing apps is an exciting concept, so I have undertaken two courses to learn React Native in more detail!"
         },
         {
             "id": 6,
             "name": "LaTeX",
             "rating": "9",
-            "description": "Used to write both my project and final-year dissertation at university, I became very fluent in using LaTeX. My preferred way to access it was the online editor Overleaf"
+            "description": "Used to write both my project and final-year dissertation at university, I became very fluent in using LaTeX. My preferred way to access it was the online editor Overleaf."
         },
         {
             "id": 7,

@@ -41,11 +41,15 @@ function About() {
                             Welcome to my website!
                         </p>
                         <p>
-                            I'm a Junior Software Developer who's still fairly new to web development!
+                            I'm a Software Developer who's in my first year as a Web Developer!
                         </p>
                         <p>
-                            This website was mostly made to try creating a website using <a href="https://reactjs.org/">React</a>, something I've been learning in my spare time.
-                            You can find the code on <a href="https://github.com/nathanjms" target="_blank" rel="noopener noreferrer">my GitHub</a>.
+                            This website was mostly made to create a website using <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>, something I've been learning in my spare time.
+                            You can find the code on <a href="https://github.com/Nathanjms/nathan-james" target="_blank" rel="noopener noreferrer">my GitHub</a>.
+                        </p>
+                        <p>
+                            My website now features a back-end for the Movies section! Written using <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">Node.js</a> and hosted on Heroku, the code 
+                            can be found <a href="https://github.com/Nathanjms/nathan-james-api-postgresql" target="_blank" rel="noopener noreferrer">here</a>.
                         </p>
                     </div>
                 </div>
