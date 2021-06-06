@@ -36,7 +36,11 @@ export default function Movies() {
       setUserInfo(result.data);
     } catch (err) {
       setUserInfo({group_id: 0, group_name: "Unknown", user_name: "Unknown"});
-      setError(err.response.data);
+      if (typeof err.response !== 'undefined') {
+        setError(err.response.data);
+      } else {
+        setError('Error: The API could not be reached.');
+      }
     }
     setLoading(false);
   };
@@ -47,7 +51,7 @@ export default function Movies() {
   }, []);
 
   useEffect(() => {
-    if (userInfo) {
+    if (userInfo && userInfo.group_id > 0) {
       getMovies(userInfo.group_id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
