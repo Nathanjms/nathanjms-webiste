@@ -34,9 +34,9 @@ function Footer() {
                 <Link to="/notes">Notes</Link>
               </li>
               <li>
-                <Link to="/movies">Movies</Link>
+                <a href="https://movies.nathanjms.co.uk">Movies</a>
               </li>
-              <li>Last updated: 6th June 2021</li>
+              <li>Last updated: 28th June 2021</li>
             </ul>
           </div>
         </div>
