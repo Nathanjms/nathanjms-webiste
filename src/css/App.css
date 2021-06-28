@@ -60,7 +60,8 @@ body {
 .intro-section img {
   padding-top: 30px;
   border-radius: 100%;
-  width: 30%;
+  width: 75%;
+  max-width: 300px;
   padding-bottom: 30px;
 }
 

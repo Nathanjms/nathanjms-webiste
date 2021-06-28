@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaYoutube } from "react-icons/fa";
-import nathan_img from "../../images/nathan.jpeg";
+import nathan_img from "../../images/nathan_square.jpg";
 
 function Home() {
   return (
