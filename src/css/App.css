@@ -50,8 +50,9 @@ body {
   padding-bottom: 50px;
 }
 
+
 #skills,
-#music {
+#music, #notFound {
   background-color: #282c34;
 }
 
