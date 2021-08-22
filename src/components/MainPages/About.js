@@ -48,7 +48,7 @@ function About() {
                             You can find the code on <a href="https://github.com/Nathanjms/nathan-james" target="_blank" rel="noopener noreferrer">my GitHub</a>.
                         </p>
                         <p>
-                            My website now features an updated api for the <a href="https://movies.nathanjms.co.uk">Movies section</a>! Written in PHP with <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">laravel</a> and hosted on Heroku, the code
+                            My website now features an updated api for the <a href="https://movies.nathanjms.co.uk">Movies section</a>! Written in PHP with <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a> and hosted on Heroku, the code
                             can be found <a href="https://github.com/Nathanjms/nathan-laravel-api" target="_blank" rel="noopener noreferrer">here</a>.
                         </p>
                     </div>
