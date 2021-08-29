@@ -104,7 +104,6 @@ body {
   #header {
     justify-content: center;
     flex-direction: column;
-    transition: all 0.5s;
     top: 0;
     left: 0;
   }
@@ -195,7 +194,6 @@ body {
 .button-logos {
   color: #45505b;
   padding: 10px 12px;
-  transition: 0.3s;
   border-radius: 20px;
   background: #f2f3f5;
   margin-left: 10px;
@@ -212,7 +210,6 @@ body {
   height: 56px;
   width: 100%;
   overflow: hidden;
-  transition: 0.3s;
   width: 56px;
 }
 
