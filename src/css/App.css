@@ -2,14 +2,35 @@
   text-align: center;
 }
 
+:root {
+  --primary: #7B26AD;
+  --teal: #269BAD;
+  --teal2: #34BDD2;
+}
+
 ::selection {
-  background-color: #7b26ad;
+  background-color: var(--primary);
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #7b26ad;
+  background-color: var(--primary);
   color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
+}
+
+a {
+  color:var(--teal);
+}
+
+a:hover {
+  color: var(--teal2);
 }
 
 body {
@@ -20,8 +41,8 @@ body {
 }
 
 .btn-primary {
-  background-color: #7b26ad;
-  border: 1px solid #7b26ad;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .modal-content {
@@ -176,7 +197,7 @@ body {
 .navBar .active > a,
 .navBar li:hover > a {
   color: #fff;
-  background: #7b26ad;
+  background: var(--primary);
 }
 
 .navBar a:hover span,
@@ -214,7 +235,7 @@ body {
 }
 
 .btn-clicked {
-  background-color: #7b26ad;
+  background-color: var(--primary);
   color: #fff !important;
 }
 
@@ -259,14 +280,6 @@ body {
 }
 
 /*--------------------------------------------------------------
-# Login
---------------------------------------------------------------*/
-
-#login .card-body {
-  color: #282c34;
-}
-
-/*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 
@@ -274,7 +287,7 @@ body {
   height: 0.25rem;
 }
 .progress-bar {
-  background-color: #7b26ad;
+  background-color: var(--primary);
 }
 
 .rating-card {
