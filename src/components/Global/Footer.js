@@ -36,7 +36,7 @@ function Footer() {
               <li>
                 <a href="https://movies.nathanjms.co.uk">Movies</a>
               </li>
-              <li>Last updated: 28th June 2021</li>
+              <li>Last updated: 18th November 2021</li>
             </ul>
           </div>
         </div>

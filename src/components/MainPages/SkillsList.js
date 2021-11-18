@@ -11,12 +11,13 @@ function SkillsInfo(skillName, desc) {
   });
 }
 
-function SkillsList({ skillsData }) {
+function SkillsList({ skillsData, columnClass = 'col-lg-6' }) {
+  console.log(columnClass)
   return (
     <div className="container">
       <div className="row justify-content-center">
         {skillsData.map((element) => (
-          <div key={element.id} className="col-sm-6 col-lg-3 mb-1">
+          <div key={element.id} className={`mb-1 ${columnClass}`}>
             <div
               className="rating-card"
               onClick={() => SkillsInfo(element.name, element.description)}

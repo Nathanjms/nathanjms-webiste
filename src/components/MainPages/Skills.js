@@ -13,17 +13,21 @@ function Skills() {
             my experience with each!
           </p>
         </div>
-        <div className="pt-5">
-          <h3 className="pb-3">Web Development</h3>
-          <SkillsList skillsData={skillsData.languages.web} />
+        <div className="row">
+          <div className="pt-5 col-md-6">
+            <h3 className="pb-3">Web Development</h3>
+            <SkillsList skillsData={skillsData.languages.web} />
+          </div>
+          <div className="pt-5 col-md-6">
+            <h3 className="pb-3">Programming</h3>
+            <SkillsList skillsData={skillsData.languages.other} />
+          </div>
         </div>
-        <div className="pt-5">
-          <h3 className="pb-3">Programming</h3>
-          <SkillsList skillsData={skillsData.languages.other} />
-        </div>
-        <div className="pt-5">
-          <h3 className="pb-3">Additional Skills</h3>
-          <SkillsList skillsData={skillsData.additional} />
+        <div className="row">
+          <div className="pt-5 col-md-12">
+            <h3 className="pb-3">Additional Skills</h3>
+            <SkillsList skillsData={skillsData.additional} columnClass={"col-sm-6 col-lg-3"} />
+          </div>
         </div>
       </div>
     </div>
