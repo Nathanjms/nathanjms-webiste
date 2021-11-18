@@ -1,6 +1,8 @@
-### The Code for my website: [www.nathanjms.co.uk](https://www.nathanjms.co.uk)
+# The Code for my website, [www.nathanjms.co.uk](https://www.nathanjms.co.uk)
 
-<img width="1364" alt="image" src="https://user-images.githubusercontent.com/64075030/142467742-ede8fccc-0cea-420d-92d7-82edaddde310.png">
+<a href="https://www.nathanjms.co.uk" target="_blank" rel="noopener noreferrer">
+  <img width="1364" alt="image" src="https://user-images.githubusercontent.com/64075030/142467742-ede8fccc-0cea-420d-92d7-82edaddde310.png">
+</a>
 
 
 ## Setup:
