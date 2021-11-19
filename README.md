@@ -1,9 +1,8 @@
 # The Code for my website, [www.nathanjms.co.uk](https://www.nathanjms.co.uk)
 
 <a href="https://www.nathanjms.co.uk" target="_blank" rel="noopener noreferrer">
-  <img width="1364" alt="image" src="https://user-images.githubusercontent.com/64075030/142467742-ede8fccc-0cea-420d-92d7-82edaddde310.png">
+  <img width="1349" alt="image" src="https://user-images.githubusercontent.com/64075030/142604685-a229d639-5a42-46fa-a588-b098f0ced706.png">
 </a>
-
 
 ## Setup:
 
