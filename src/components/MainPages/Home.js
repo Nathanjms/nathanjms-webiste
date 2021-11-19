@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import nathan_img from "../../images/nathan_square.jpg";
 
 function Home() {
@@ -16,9 +16,9 @@ function Home() {
             </a>
             <a
               className="button-logos"
-              href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"
+              href="https://www.linkedin.com/in/nathan-jms/"
             >
-              <FaYoutube color="#ff0000" />
+              <FaLinkedin id="linkedin" color="#0077B5" />
             </a>
           </div>
         </div>

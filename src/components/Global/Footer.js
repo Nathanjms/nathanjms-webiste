@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -18,9 +18,9 @@ function Footer() {
                 </a>
                 <a
                   className="footerLogos"
-                  href="https://www.youtube.com/channel/UCWL6DjV5c8oMBhOSzpvilmw"
+                  href="https://www.linkedin.com/in/nathan-jms/"
                 >
-                  <FaYoutube />
+                  <FaLinkedin />
                 </a>
               </li>
             </ul>
@@ -36,7 +36,7 @@ function Footer() {
               <li>
                 <a href="https://movies.nathanjms.co.uk">Movies</a>
               </li>
-              <li>Last updated: 18th November 2021</li>
+              <li>Last updated: 19th November 2021</li>
             </ul>
           </div>
         </div>

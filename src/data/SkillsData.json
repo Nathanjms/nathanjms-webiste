@@ -56,7 +56,7 @@
   "additional": [
     {
       "id": 1,
-      "name": "Git(Hub)",
+      "name": "Git",
       "rating": "8.5",
       "description": "Used briefly during my dissertation, I now use Git (mainly with GitHub) on a daily basis during my role as a Software Developer."
     },

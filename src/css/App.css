@@ -6,6 +6,8 @@
   --primary: #7B26AD;
   --teal: #269BAD;
   --teal2: #34BDD2;
+  --darkBackground: #282c34;
+  --greyBackground: #3d4148;
 }
 
 ::selection {
@@ -34,7 +36,7 @@ a:hover {
 }
 
 body {
-  background-color: #282c34;
+  background-color: var(--darkBackground);
   min-height: 50vh;
   color: #f9f9f9;
   text-align: center;
@@ -46,11 +48,11 @@ body {
 }
 
 .modal-content {
-  color: #3d4148;
+  color: var(--greyBackground);
 }
 
 #home {
-  background-color: #282c34;
+  background-color: var(--darkBackground);
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -61,7 +63,7 @@ body {
 }
 
 .main-body-sections {
-  background-color: #3d4148;
+  background-color: var(--greyBackground);
   min-height: 30vh;
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@ body {
 
 #skills,
 #music, #notFound {
-  background-color: #282c34;
+  background-color: var(--darkBackground);
 }
 
 #music {
@@ -82,7 +84,7 @@ body {
 }
 
 #footer {
-  background-color: #3d4148;
+  background-color: var(--greyBackground);
   min-height: 20vh;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -144,11 +146,19 @@ body {
 
 .footerLogos {
   color: #f2f3f5 !important;
-  background: #282c34;
+  background: var(--darkBackground);
   padding: 6px 8px;
   margin-right: 8px;
   font-size: 12px;
   border-radius: 5px;
+}
+
+.footerLogos:hover {
+  background-color: white;
+}
+
+.footerLogos:hover>svg {
+  color:var(--greyBackground)!important;
 }
 
 .footerList li {
@@ -174,7 +184,7 @@ body {
 .navBar > ul > li {
   position: relative;
   white-space: nowrap;
-  border-color: #282c34;
+  border-color: var(--darkBackground);
   display: inline;
 }
 
@@ -214,11 +224,20 @@ body {
 
 .button-logos {
   color: #45505b;
-  padding: 10px 12px;
-  border-radius: 20px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 10px;
   background: #f2f3f5;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.button-logos:hover {
+  color: white;
+  background-color: var(--primary);
+}
+
+.button-logos:hover>svg {
+  color:white!important;
 }
 
 .button-shape {
@@ -293,7 +312,7 @@ body {
 .rating-card {
   padding: 20px;
   margin: 10px;
-  background-color: #3d4148;
+  background-color: var(--greyBackground);
   border-radius: 15px;
   cursor: pointer;
 }
@@ -304,7 +323,7 @@ body {
 .education-card {
   padding: 20px;
   margin-top: 2rem;
-  background-color: #282c34;
+  background-color: var(--darkBackground);
   border-radius: 15px;
   text-align: left;
   width: 100%;
@@ -315,7 +334,7 @@ body {
 }
 
 .edu-accord-header {
-  background-color: #3d4148;
+  background-color: var(--greyBackground);
   margin-top: 1rem;
   border-radius: 10px 10px 0 0;
   text-align: left;
@@ -324,42 +343,6 @@ body {
 }
 
 #education .card-body {
-  background-color: #3d4148;
+  background-color: var(--greyBackground);
   border-radius: 0 0 10px 10px;
-}
-
-/*--------------------------------------------------------------
-# Movies
---------------------------------------------------------------*/
-
-#movies {
-  padding-bottom: 20vh;
-  min-height: 80vh;
-}
-
-#movies .card-body {
-  background-color: #3d4148;
-  border-radius: 10px;
-}
-
-#movies .btn-primary {
-  background-color: #282c34;
-  border: 1px solid #3d4148;
-}
-
-.random-movie-card {
-  padding: 25px;
-}
-
-.nav-tabs {
-  margin-bottom: 20px;
-}
-
-#moviesAboutDiv {
-  max-width: 90%;
-}
-
-#randomMovieDiv {
-  max-width: 80%;
-  width: 500px;
 }
