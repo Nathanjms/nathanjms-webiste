@@ -14,8 +14,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
-    gtag('config', 'G-6H7MJ5M02G');
+    
+    gtag('config', 'G-6H7MJ5M02G', {
+      cookie_flags: 'max-age=7200;secure;samesite=none'
+    });
   </script>
   <!--
       manifest.json provides metadata used when your web app is installed on a
