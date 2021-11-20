@@ -8,14 +8,21 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+  ReactGA.initialize('G-6H7MJ5M02G');
+  ReactGA.pageview('/');
+}
 
 function Main() {
+  initializeReactGA();
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/notes" component={Notes} />
-        <Route path="*" component={NotFound} />
+      <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );
