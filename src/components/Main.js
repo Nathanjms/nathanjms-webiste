@@ -8,15 +8,8 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import ReactGA from 'react-ga';
-
-function initializeReactGA() {
-  ReactGA.initialize('G-6H7MJ5M02G');
-  ReactGA.pageview('/');
-}
 
 function Main() {
-  initializeReactGA();
   return (
     <Router>
       <Switch>
