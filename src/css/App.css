@@ -35,6 +35,19 @@ a:hover {
   color: var(--teal2);
 }
 
+span.link {
+  color: var(--teal);
+  cursor: pointer;
+}
+
+span.link:hover {
+  color: var(--teal2);
+  text-decoration: underline;
+}
+
+.swalBtn {
+  margin: .3125em;
+}
 body {
   background-color: var(--darkBackground);
   min-height: 50vh;
