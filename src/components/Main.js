@@ -15,7 +15,7 @@ function Main() {
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/notes" component={Notes} />
-      <Route path="*" component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );

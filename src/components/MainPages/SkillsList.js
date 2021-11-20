@@ -12,6 +12,7 @@ function SkillsInfo(skillName, desc) {
 }
 
 function SkillsList({ skillsData, columnClass = 'col-lg-6' }) {
+  console.log(columnClass)
   return (
     <div className="container">
       <div className="row justify-content-center">
