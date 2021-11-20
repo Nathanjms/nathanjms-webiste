@@ -10,9 +10,10 @@ function About() {
         cancelButton: "btn btn-secondary swalBtn",
       },
       buttonsStyling: false,
-    }).fire({
-      title: "What is the movies section?",
-      html: `<div>
+    })
+      .fire({
+        title: "What is the movies section?",
+        html: `<div>
         <p>In the movies section, a user can:</p>
         <ul class="text-left">
           <li>Create a watchlist of movies for themselves and their group.</li>
@@ -36,14 +37,15 @@ function About() {
           >here</a>.
         </p>
         </div>`,
-      showCancelButton: true,
-      confirmButtonText: `Take me to the Movies Section!`,
-      cancelButtonText: `Okay`,
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location.href = `https://movies.nathanjms.co.uk`
-      }
-    })
+        showCancelButton: true,
+        confirmButtonText: `Take me to the Movies Section!`,
+        cancelButtonText: `Okay`,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = `https://movies.nathanjms.co.uk`;
+        }
+      });
   };
 
   return (
@@ -104,10 +106,16 @@ function About() {
               .
             </p>
             <p>
-              My website now features an updated API for the Movies section.{" "}
-              <span className="link" onClick={() => aboutMovies()} tabIndex="0">
+              My website now features an updated API for the Movies section.
+            </p>
+            <p>
+              <button
+                className="btn btn-primary"
+                onClick={() => aboutMovies()}
+                tabIndex="0"
+              >
                 Read more about it here!
-              </span>
+              </button>
             </p>
           </div>
         </div>
