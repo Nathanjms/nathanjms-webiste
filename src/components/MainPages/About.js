@@ -43,7 +43,7 @@ function About() {
       })
       .then((result) => {
         if (result.isConfirmed) {
-          window.location.href = `https://movies.nathanjms.co.uk`;
+          window.location.href = `https://movies.nathanjms.co.uk/demo`;
         }
       });
   };
