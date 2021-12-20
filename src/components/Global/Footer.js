@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="container text-left">
+    <div className="container text-start">
       <div className="row">
         <div className="col-md-6">
           <h4 style={{ paddingBottom: "20px" }}>Contact</h4>

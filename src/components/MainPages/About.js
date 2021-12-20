@@ -15,7 +15,7 @@ function About() {
         title: "What is the movies section?",
         html: `<div>
         <p>In the movies section, a user can:</p>
-        <ul class="text-left">
+        <ul class="text-start">
           <li>Create a watchlist of movies for themselves and their group.</li>
           <li>Everyone in the group will be able to add movies, mark them as watched, as well as give them a rating!</li>
           <li>
