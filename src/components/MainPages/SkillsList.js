@@ -28,7 +28,7 @@ function SkillsList({ skillsData, columnClass = 'col-lg-6' }) {
                   className="progress-bar"
                   style={{ width: element.rating * 10 + "%" }}
                 >
-                  <span className="sr-only">
+                  <span className="visually-hidden">
                     Rating: {element.rating} out of 10.
                   </span>
                 </div>
