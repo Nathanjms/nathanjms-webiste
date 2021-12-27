@@ -10,7 +10,7 @@
       {
         "id": 2,
         "name": "React",
-        "rating": "6",
+        "rating": "7",
         "description": "The language the website has been built in! I've taken multiple online courses in React and am learning more all of the time! Check out the Movies section of this website to see how my learning of React is going!"
       },
       {
@@ -69,7 +69,7 @@
     {
       "id": 3,
       "name": "CodeIgniter",
-      "rating": "8",
+      "rating": "8.5",
       "description": "One of the main Frameworks used in my job, I have developed an understanding of CodeIgniter and will continue to learn it in more detail as I work closely with it."
     },
     {
@@ -101,6 +101,12 @@
       "name": "Ubuntu Server",
       "rating": "7.5",
       "description": "I've used various Linux distributions over the past few years, but have gained knowledge in setting up Ubuntu servers and SSH relatively recently."
+    },
+    {
+      "id": 9,
+      "name": "TypeScript",
+      "rating": "4.5",
+      "description": "Something I have recently started to learn to build upon my JavaScript knowledge."
     }
   ]
 }
