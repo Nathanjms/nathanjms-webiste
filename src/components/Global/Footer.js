@@ -31,9 +31,6 @@ function Footer() {
           <div className="contact">
             <ul className="footerList list-unstyled">
               <li>
-                <Link to="/notes">Notes</Link>
-              </li>
-              <li>
                 <a href="https://movies.nathanjms.co.uk">Movies</a>
               </li>
               <li>
