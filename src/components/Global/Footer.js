@@ -30,7 +30,7 @@ function Footer() {
           <div className="contact">
             <ul className="footerList list-unstyled">
               <li>
-                <a href="https://movies.nathanjms.co.uk">Movies</a>
+                <a href="https://gymnotes.uk">GymNotes</a>
               </li>
               <li>
                 <a href="https://tools.nathanjms.co.uk">Tools</a>
